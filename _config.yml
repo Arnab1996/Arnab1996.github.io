@@ -1,0 +1,37 @@
+# Site settings
+name: Arnab Saha
+title: Arnab Saha | Software Developer
+description: Design-minded front-end software engineer focused on building beautiful interfaces and experiences
+url: https://arnab1996.github.io/
+baseurl: ''
+email: arnabthedragon@gmail.com
+resume: https://arnab1996.github.io/resume_Arnab1996.pdf
+social:
+  - title: email
+    url: mailto:arnabthedragon@gmail.com
+  - title: github
+    url: https://github.com/Arnab1996
+  - title: linkedin
+    url: https://www.linkedin.com/in/arnabsaha1996
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap
