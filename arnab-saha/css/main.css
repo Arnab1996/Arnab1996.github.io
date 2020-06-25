@@ -1,0 +1,974 @@
+/* Roboto */
+
+
+/* cyrillic-ext */
+
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'), url(https://fonts.gstatic.com/s/oldstandardtt/v9/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tRlZfTc4PlJz5.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'), url(https://fonts.gstatic.com/s/oldstandardtt/v9/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tT1ZfTc4PlJz5.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'), url(https://fonts.gstatic.com/s/oldstandardtt/v9/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tRFZfTc4PlJz5.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'), url(https://fonts.gstatic.com/s/oldstandardtt/v9/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tRVZfTc4PlJz5.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Old Standard TT Bold'), local('OldStandardTT-Bold'), url(https://fonts.gstatic.com/s/oldstandardtt/v9/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tS1ZfTc4PlA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* cyrillic-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc3CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc-CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* greek-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc2CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+
+/* greek */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc5CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc1CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc0CsTYl4BOQ3o.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TjASc6CsTYl4BO.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* cyrillic-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fABc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* greek-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCBc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+
+/* greek */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBxc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fCxc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fChc4AMP6lbBP.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc4AMP6lQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* Rubik Font */
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik One Regular'), local('RubikOne-Regular'), url(https://fonts.gstatic.com/s/rubikone/v6/0nkqC9H5Je0aiyQv-6PIbCTvivz9iTq_.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik One Regular'), local('RubikOne-Regular'), url(https://fonts.gstatic.com/s/rubikone/v6/0nkqC9H5Je0aiyQv-6PIZiTvivz9iTq_.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rubik One Regular'), local('RubikOne-Regular'), url(https://fonts.gstatic.com/s/rubikone/v6/0nkqC9H5Je0aiyQv-6PIaCTvivz9iQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* Nunito - Font */
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofA6sKUbuvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofA6sKUb-vIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofA6sKUYevIWzgPDA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAjsOUbuvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAjsOUb-vIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAjsOUYevIWzgPDA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAtsGUbuvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAtsGUb-vIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v9/XRXW3I6Li01BKofAtsGUYevIWzgPDA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/*main*/
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url("../images/pattern.svg");
+    overflow: hidden
+}
+
+body.windows::-webkit-scrollbar {
+    width: 10px
+}
+
+body.windows::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0)
+}
+
+body.windows::-webkit-scrollbar-thumb {
+    background-color: #BDBDBD
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    position: relative
+}
+
+a {
+    color: #BDBDBD
+}
+
+a:active,
+a:focus,
+a:hover,
+a:visited {
+    color: #BDBDBD
+}
+
+a.fancy {
+    position: relative;
+    font-weight: 900;
+    color: inherit;
+    text-decoration: none;
+    color: #6356E5
+}
+
+#sp {
+    color: #2ebd59
+}
+
+#you {
+    color: #cd201f
+}
+
+.rendu {
+    margin-top: 8%
+}
+
+.container {
+    background-color: #FFF;
+    max-width: 900px;
+    padding-bottom: 10px padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.vetti-scene {
+    position: relative;
+    overflow: hidden;
+    background-color: #0F1021;
+    z-index: 10
+}
+
+.vetti-scene .opl {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 999999
+}
+
+.vetti-scene .cssaw {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    z-index: 10000
+}
+
+.vetti-scene .cssaw a {
+    width: 54px;
+    height: 63px;
+    display: block;
+    background: url(http://www.cssdesignawards.com/badges/award-nominee-cssda-160-r.png) no-repeat;
+    background-size: 54px
+}
+
+.vetti-scene .down {
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear 2s;
+    -o-transition: opacity 0.5s linear 2s;
+    transition: opacity 0.5s linear 2s;
+    -webkit-animation: scroll 2s infinite;
+    animation: scroll 2s infinite
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        bottom: 30px
+    }
+    15% {
+        bottom: 20px
+    }
+    30% {
+        bottom: 30px
+    }
+}
+
+@keyframes scroll {
+    0% {
+        bottom: 30px
+    }
+    15% {
+        bottom: 20px
+    }
+    30% {
+        bottom: 30px
+    }
+}
+
+.vetti-scene .down img {
+    width: 100%;
+    padding: 8px
+}
+
+.vetti-scene .rangoli-vattam {
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+    margin-left: -50%;
+    margin-top: -50%;
+    -webkit-transition: -webkit-transform 30s linear;
+    transition: -webkit-transform 30s linear;
+    -o-transition: transform 30s linear;
+    transition: transform 30s linear;
+    transition: transform 30s linear, -webkit-transform 30s linear
+}
+
+.vetti-scene .peru {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 300px;
+    left: 50px;
+    color: white;
+    z-index: 100;
+    mix-blend-mode: difference
+}
+
+.vetti-scene .seira-vela {
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 260px;
+    left: 53px;
+    color: white;
+    z-index: 100;
+    mix-blend-mode: difference
+}
+
+.rendu {
+    position: relative;
+    display: none
+}
+
+.chinnatha-sceneu-irukarathu {
+    position: relative
+}
+
+header {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+    z-index: 6;
+    color: #FFF;
+    pointer-events: none
+}
+
+header img {
+    width: 100%
+}
+
+.my-nav {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 5;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 4px 10px rgba(51, 51, 51, 0.3);
+    box-shadow: 0 20px 10px rgba(51, 51, 51, 0.3)
+}
+
+.my-nav a {
+    margin: 0 40px;
+    color: #fff
+}
+
+.my-nav a:first-child {
+    margin-left: 150px
+}
+
+.my-nav:hover {
+    width: 800px
+}
+
+.enna-pathi {
+    margin-top: 70px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #747474
+}
+
+.enna-pathi #second {
+    margin-top: 30px
+}
+
+.slick-list {
+    overflow: visible
+}
+
+.en-moonji {
+    width: 100%;
+    text-align: center;
+    margin: 20% 0
+}
+
+.en-moonji img {
+    width: 100%;
+    position: relative;
+    border-radius: 4px
+}
+
+.en-moonji .mangala-theriyum {
+    position: relative
+}
+
+.en-moonji .mangala-theriyum #blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px)
+}
+
+.en-moonji a {
+    position: relative;
+    top: 30px
+}
+
+.container h2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 30px;
+    height: 3px
+}
+
+.na-senjathu {
+    margin-top: 20%
+}
+
+.na-senjathu .row {
+    margin: 70px 0 0
+}
+
+.na-senjathu .thalaipu-matrum-matravai {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #8BCDDC;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.na-senjathu .thalaipu-matrum-matravai .thalaipu {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.na-senjathu .thalaipu-matrum-matravai .matravai {
+    white-space: nowrap
+}
+
+.na-senjathu .thalaipu-matrum-matravai .matravai span {
+    margin-left: 50px;
+    position: relative
+}
+
+.na-senjathu .thalaipu-matrum-matravai .matravai span:first-child:before {
+    content: none
+}
+
+.na-senjathu .thalaipu-matrum-matravai .matravai span:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    top: 8px;
+    position: absolute;
+    left: -29px;
+    background-color: #dadada
+}
+
+.na-senjathu .ithu-enna-seiyum {
+    font-size: 18px;
+    line-height: 40px;
+    color: #747474;
+    margin: 30px;
+}
+
+.button-iruku-inga {
+    text-align: center;
+    margin: 70px 0
+}
+
+.button-iruku-inga button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    -webkit-box-shadow: 0 0 40px rgba(99, 86, 229, 0.6);
+    box-shadow: 0 0 40px rgba(99, 86, 229, 0.6);
+    background-color: #6356E5;
+    font-weight: 900;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    outline: none
+}
+
+.button-iruku-inga button:hover {
+    -webkit-box-shadow: 0 0 60px rgba(99, 86, 229, 0.8);
+    box-shadow: 0 0 60px rgba(99, 86, 229, 0.8)
+}
+
+.inayam {
+    margin-top: 30px
+}
+
+.inayam a {
+    margin-right: 50px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff
+}
+
+.inayam a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    top: 10px;
+    position: absolute;
+    right: -27px;
+    background-color: #dadada;
+    z-index: -1
+}
+
+.inayam a:last-child:after {
+    content: none
+}
+
+.inayam #git {
+    color: #333
+}
+
+.inayam #so {
+    color: #f48024
+}
+
+.inayam #hn {
+    color: #0077b5
+}
+
+.inayam #me {
+    color: #00ab6c
+}
+
+.inayam #db {
+    color: #ea4c89
+}
+
+footer {
+    height: 300px;
+    top: 100px;
+    margin-top: 50px;
+    background-color: #2A363B;
+    background-image: url(../images/pattern.svg);
+    background-position: 0 -80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFF;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+footer .love {
+    text-align: center
+}
+
+footer .hosted {
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+footer p {
+    opacity: 0.5;
+    margin-top: 20px;
+    position: relative;
+    top: 15px
+}
+
+footer .bottom-links {
+    margin-top: 70px;
+    width: 100%;
+    max-width: 460px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 15px
+}
+
+footer .bottom-links a {
+    background-color: transparent;
+    margin: 0
+}
+
+footer .bottom-links a:after {
+    content: none
+}
+
+footer #git {
+    color: #CCC!important
+}
+
+.enaku-therunjathu #ux {
+    width: 60%
+}
+
+.enaku-therunjathu #ui {
+    width: 90%
+}
+
+.enaku-therunjathu #html {
+    width: 93%
+}
+
+.enaku-therunjathu #js {
+    width: 90%
+}
+
+.enaku-therunjathu #react {
+    width: 98%
+}
+
+.enaku-therunjathu .enaku-therunjathu-block {
+    margin-bottom: 50px
+}
+
+.enaku-therunjathu .enaku-therunjathu-block h4 {
+    font-weight: 600
+}
+
+.enaku-therunjathu .enaku-therunjathu-list {
+    margin: 30px;
+}
+
+.enaku-therunjathu .percentage-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 7px;
+    background-color: #f1f1f1
+}
+
+.enaku-therunjathu .percentage-container.no-width .percentage {
+    width: 0!important
+}
+
+.enaku-therunjathu .percentage-container .percentage {
+    height: 100%;
+    background: -webkit-linear-gradient(28deg, #6356e5, #a262d2);
+    /*background:-o-linear-gradient(28deg, #6356e5, #a262d2);*/
+    /*background:linear-gradient(62deg, #6356e5, #a262d2);*/
+    -webkit-transition: width 1.5s ease-in-out;
+    -o-transition: width 1.5s ease-in-out;
+    transition: width 1.5s ease-in-out
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .vetti-scene .cssaw {
+        top: 50px
+    }
+    .vetti-scene .opl {
+        top: 120px
+    }
+    .vetti-scene .peru {
+        font-size: 60px;
+        position: absolute;
+        bottom: 200px;
+        left: 15px
+    }
+    .vetti-scene .seira-vela {
+        font-size: 20px;
+        position: absolute;
+        bottom: 160px;
+        left: 15px
+    }
+}
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10;
+}
