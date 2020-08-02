@@ -1,0 +1,246 @@
+/*
+ * author: Roman Shprenger
+ * template: a.k1 - Creative Portfolio & Blog HTML5 Template
+ * version: v1.1
+ * url: https: */
+/**** FONTS ****/
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web");
+/**** main titles on home page ****/
+.home__welcome-title, .home__about-title, .home__blog-title, .home__contacts-title {
+  font-family: "Oswald", sans-serif; }
+
+/**** main title on project, blog, article and works pages ****/
+.page__title {
+  font-family: "Oswald", sans-serif; }
+
+/**** label and count in comments ****/
+.comments__label, .comments__count {
+  font-family: "Oswald", sans-serif; }
+
+/**** links in header ****/
+.header a {
+  font-family: "Oswald", sans-serif; }
+
+/**** title of skills section on home page ****/
+.home__about-skills-title {
+  font-family: "Oswald", sans-serif; }
+
+/**** headings in information about client on project page ****/
+.project__client-heading {
+  font-family: "Oswald", sans-serif; }
+
+/**** social links ****/
+.socials__link {
+  font-family: "Oswald", sans-serif; }
+
+/**** text in buttons ****/
+.btn {
+  font-family: "Oswald", sans-serif; }
+
+/**** any text ****/
+body, p {
+  font-family: "Istok Web", sans-serif; }
+
+/**** item of list ****/
+ul.list li {
+  font-family: "Istok Web", sans-serif; }
+
+/**** title and date in preview of blog on home page ****/
+.home__blog-preview-title, .home__blog-preview-date {
+  font-family: "Istok Web", sans-serif; }
+
+/**** title and date of article on blog page ****/
+.blog__item-title, .blog__item-date {
+  font-family: "Istok Web", sans-serif; }
+
+/**** links, headings and text on project page ****/
+.project__description-heading, .project__steps-heading {
+  font-family: "Istok Web", sans-serif; }
+
+.project__client-text, .project__description-text {
+  font-family: "Istok Web", sans-serif; }
+
+.project__link {
+  font-family: "Istok Web", sans-serif; }
+
+/**** blockquote, text, headings, date, count of comments under main title on article page ****/
+.article__heading, .article__date, .article__stat {
+  font-family: "Istok Web", sans-serif; }
+
+.article__text p {
+  font-family: "Istok Web", sans-serif; }
+
+.article__quote blockquote {
+  font-family: "Istok Web", sans-serif; }
+
+/**** text and authors name of comment ****/
+.comment__author, .comment__text {
+  font-family: "Istok Web", sans-serif; }
+
+/**** content and contact texts on home page ****/
+.home__welcome-content, .home__about-content, .home__contacts-content {
+  font-family: "Istok Web", sans-serif; }
+
+.home__contacts-geo, .home__contacts-mail, .home__contacts-contacts {
+  font-family: "Istok Web", sans-serif; }
+
+.home__blog-preview-text {
+  font-family: "Istok Web", sans-serif; }
+
+/**** name of project in portfolio grid ****/
+.portfolio__title {
+  font-family: "Istok Web", sans-serif; }
+
+/**** title and value of skill in about section of home page ****/
+.skills__title, .skills__value {
+  font-family: "Istok Web", sans-serif; }
+
+/**** pagination ****/
+.pagination__item {
+  font-family: "Istok Web", sans-serif; }
+
+/**** FONT COLORS ****/
+/**** Colors of text and titles ****/
+body {
+  color: #909090; }
+
+h1, h2 {
+  color: #BEBEBE; }
+
+h3 {
+  color: #ADADAD; }
+
+h4 {
+  color: #909090; }
+
+h5 {
+  color: #AAAAAA; }
+
+p, small {
+  color: #909090; }
+
+/**** Colors of text in fields of forms ****/
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  color: #AAAAAA; }
+
+/**** Colors of button text ****/
+.btn {
+  color: #AAAAAA; }
+  .btn:hover {
+    color: #BEBEBE; }
+
+/**** Colors of links on pages ****/
+a {
+  color: #BEBEBE; }
+  a:hover {
+    color: #AAAAAA; }
+
+/**** Colors of links in header navigation ****/
+.header__nav-link {
+  color: #AAAAAA; }
+  .header__nav-link:hover {
+    color: #BEBEBE; }
+
+/**** Colors of text (p) and links (a) in footer and in socials bar ****/
+.footer p, .socials p {
+  color: #AAAAAA; }
+
+.footer a, .socials a {
+  color: #AAAAAA; }
+  .footer a:hover, .socials a:hover {
+    color: #BEBEBE; }
+
+/**** Color of preview short text in item of blog grid ****/
+.blog__item-text {
+  color: #AAAAAA; }
+
+/**** Color of link in pagination ****/
+.pagination__link {
+  color: #AAAAAA; }
+
+/**** BACKGROUND COLORS ****/
+/**** main background ****/
+body {
+  background-color: #1F1F1F; }
+
+/**** active item in pagination ****/
+.pagination__item--active {
+  background-color: #292929; }
+
+/**** title of portfolio item ****/
+.portfolio__item-title {
+  background-color: #292929; }
+
+/**** background of title in portfolio's grid item ****/
+@media only screen and (min-width: 1280px) {
+  .portfolio--grid .portfolio__item-title {
+    background-color: #1F1F1F; } }
+
+/**** client photo on project page ****/
+.project__client-image {
+  background-color: #292929; }
+
+/**** section with form on project page ****/
+.contact-preview {
+  background-color: #292929; }
+
+/**** dots of list item ****/
+ul.list li:before {
+  background-color: #BEBEBE; }
+
+/**** button border ****/
+.btn {
+  border-color: #909090; }
+  .btn:hover {
+    border-color: #909090; }
+
+/**** button border ****/
+.header--scrolled {
+  background: rgba(31, 31, 31, 0.9); }
+
+/**** burger menu ****/
+.header__nav {
+  background-color: #1F1F1F; }
+
+.header__burger span {
+  background: #909090; }
+  .header__burger span:before, .header__burger span:after {
+    background: #909090; }
+
+.header__burger:hover span {
+  background: #909090; }
+  .header__burger:hover span:before, .header__burger:hover span:after {
+    background: #909090; }
+
+/**** skills bars ****/
+.skills__progress {
+  border-bottom: 4px solid #303030; }
+  .skills__progress span {
+    border-bottom: 4px solid #909090; }
+
+/**** count of comments ****/
+.comments__count {
+  background-color: #303030; }
+
+/**** dash in footer ****/
+.footer__dash:before {
+  border-bottom-color: #303030; }
+
+/**** background of fields on form ****/
+.field__input, .field__textarea {
+  background-color: #303030; }
+
+/**** border of socials bar ****/
+.socials {
+  border-bottom-color: #303030; }
+
+/**** gradient of footer ****/
+.footer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(31, 31, 31, 0)), color-stop(22%, rgba(31, 31, 31, 0.6)), color-stop(36%, rgba(31, 31, 31, 0.7)), color-stop(55%, rgba(31, 31, 31, 0.9)), color-stop(76%, #1F1F1F));
+  background-image: -webkit-linear-gradient(top, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 22%, rgba(31, 31, 31, 0.7) 36%, rgba(31, 31, 31, 0.9) 55%, #1F1F1F 76%);
+  background-image: -moz-linear-gradient(top, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 22%, rgba(31, 31, 31, 0.7) 36%, rgba(31, 31, 31, 0.9) 55%, #1F1F1F 76%);
+  background-image: -o-linear-gradient(top, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 22%, rgba(31, 31, 31, 0.7) 36%, rgba(31, 31, 31, 0.9) 55%, #1F1F1F 76%);
+  background-image: linear-gradient(-180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 22%, rgba(31, 31, 31, 0.7) 36%, rgba(31, 31, 31, 0.9) 55%, #1F1F1F 76%); }
+
+/**** Write your custom styles at this file ****/
