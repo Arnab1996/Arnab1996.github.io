@@ -1,0 +1,1010 @@
+<!--
+                       __                  __
+					  / /       ____      / /
+ ___  ____ ____ ___  / /_      / __/___  / /_   ___
+/ _ `/ __// _ // _ `/ /_ \    _\ \ / _ `/ /_ \/ _ `/
+\_,_/_/  /_/// \_,_/_/.__/   /___/ \_,_/_/ /_/\_,_/|
+
+-->
+
+<!DOCTYPE html>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170483322-1"></script>
+ <script>
+     window.dataLayer = window.dataLayer || [];
+
+     function gtag() {
+         dataLayer.push(arguments);
+     }
+     gtag('js', new Date());
+
+     gtag('config', 'UA-170483322-1');
+ </script>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<script defer src="assets/jQuery.min.js"></script>
+
+<style type="text/css">
+
+.test:hover {
+        font-size: 0;
+}
+    
+.test:hover:before {
+        font-size: 20px;
+        content: attr(data-hover);
+}
+ 
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(https://govanify.com/fonts/SourceCodePro-Regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+ 
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(https://govanify.com/fonts/SourceCodePro-Regular-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+ 
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Code Pro Bold'), local('SourceCodePro-Bold'), url(https://govanify.com/fonts/SourceCodePro-Bold-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+ 
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Code Pro Bold'), local('SourceCodePro-Bold'), url(https://govanify.com/fonts/SourceCodePro-Bold-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+ 
+body {
+  margin: 0;
+  visibility: hidden;
+  background-color: #2d2d2d;
+  color: #f2f0ec;
+  font-size: 0%;
+}
+
+</style>
+
+
+<meta name="og:description" content="Recently I learned about the existence of what is known as Google Foobar also known as &ldquo;Google secret recruiting program&rdquo; or &ldquo;How much bunnies can you rescue before wanting to kill someone&rdquo; and being the stubborn me that I am, I decided to force my way in and try the challenges!
+&hellip;
+I didn&rsquo;t expected to be able to get in but it seems I did, so I guess I&rsquo;m indebted to do a writeup or something?" />
+<meta name="og:title" content="Solving Google Foobar and hacking it along the way" />
+<meta name="og:image" content="" />
+<meta name="Description" content="Recently I learned about the existence of what is known as Google Foobar also known as &ldquo;Google secret recruiting program&rdquo; or &ldquo;How much bunnies can you rescue before wanting to kill someone&rdquo; and being the stubborn me that I am, I decided to force my way in and try the challenges!
+&hellip;
+I didn&rsquo;t expected to be able to get in but it seems I did, so I guess I&rsquo;m indebted to do a writeup or something?">
+
+<meta property="og:image" content="assets/google.gif">
+<title>Arnab Saha | Solving Google Foobar</title>
+
+<script defer src="assets/katex.min.js"></script>
+<script defer src="assets/auto-render.min.js"></script>
+
+</head>
+<body>
+
+    
+<h1 class="site-title">
+    <center>
+        <img src="assets/google.gif" alt="Logo" width="150">
+    </center>
+</h1>
+<center>
+    
+</center>
+
+<div style="text-align: center;">
+    <i class="test" data-hover="I shall either find a way or make one">
+        Aut inveniam viam aut faciam
+    </i>
+</div>
+
+<div id="layout">
+    <div id="menuLink" class="menu-link">
+        <span></span>
+    </div>
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="https://arnab1996.github.io/google-foobar">FooBar</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="https://arnab1996.github.io/about" class="pure-menu-link">About</a></li>
+    <li class="pure-menu-item"><center><a class="pure-menu-link">ToC</a></center></li>
+
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#solar-doomsday"> Solar Doomsday</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#ion-flux-relabelling"> Ion Flux Relabelling</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#en-route-salute"> En Route Salute</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#fuel-injection-perfection"> Fuel Injection Perfection</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#queue-to-do"> Queue To Do</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#find-the-access-code"> Find the access code</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#distract-the-guards"> Distract the Guards</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#bringing-a-gun-to-a-guard-fight"> Bringing a Gun to a Guard Fight</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#expanding-nebula"> Expanding Nebula</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#end-and-hack-stuff"> End and hack stuff</a>
+                </li>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+                
+                
+                
+                                   
+                
+                
+                
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link-toc" href="#conclusion"> Conclusion</a>
+                </li>
+                
+                
+                
+            
+        
+    
+
+
+          </ul>
+        </div>
+    </div>
+
+    <div id="main">
+
+<div class="container">
+
+
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2018-09-18">September 5, 2020</time></span>
+
+
+
+  </div>
+  <h1 class="headline" itemprop="headline">Solving Google Foobar and hacking it along the way</h1>
+  <section class="body" itemprop="articleBody">
+    <p>Recently I learned about the existence of what is known as <a href="https://google.com/foobar/">Google
+Foobar</a> also known as &ldquo;Google secret recruiting
+program&rdquo; or &ldquo;How much bunnies can you rescue before wanting to kill someone&rdquo; and
+being the stubborn me that I am, I decided to force my way in and try the
+challenges!<br>
+&hellip;<br>
+I didn&rsquo;t expected to be able to get in but it seems I did, so I guess I&rsquo;m
+indebted to do a writeup or something? Oh well, I won&rsquo;t cry over easy and
+interesting content for my blog.</p>
+<figure>
+    <img src="assets/foobar.png"/> <figcaption>
+            <h4>This is Google Foobar</h4>
+        </figcaption>
+</figure>
+
+<p>So as you can see, Foobar is basically a website which contains a unix-like
+shell, based on &ldquo;jQuery Terminal&rdquo;, which does have some standard unix commands,
+including some which aren&rsquo;t listed in the <code>help</code> command, namely <code>mount</code> or
+<code>cat</code>.
+When you can finally access foobar they&rsquo;re prompting you to use the help command
+to see the standard set of commands one would use, and to use the command
+<code>request</code> whenever you&rsquo;re ready, sending a POST request to
+<code>https://foobar.withgoogle.com/api/v1/commands/request/</code> and adding a folder
+into your home directory(<code>https://foobar.withgoogle.com/api/v1/files/</code>).
+This folder always contains 4 files: <code>solution.py</code>,
+<code>solution.java</code>, <code>constraints.txt</code> and <code>readme.txt</code> which you can read using the
+less command(listed in help) or cat(not listed but super handy to copy stuff,
+since i never got less to honour linefeeds for some reason).<br>
+The solution files are supposed to contain, well, your solutions, constraints
+tells you the stuff like &ldquo;python 2.7 only basic libs&rdquo; and readme the problem.
+You always have to write a function <code>answer</code> which answers (how surprising) the
+problem, either in java or in python. Foobar tests those by using a test VM
+which, in the case of python, is isolated by nsjail and interacts with the file
+descriptor 3 outside of the VM since it virtually have no other access to
+outside data, but more onto that much later. They test it to up to 10 test
+cases(can be as low as 5 though, ie the combinatorics problem I&rsquo;m talking about
+below, and you can then submit your problem to be able to request a new one et
+cetera. A little thing to note is that, however, all those challenges are
+timed(the first being 2days and the last being 22 iirc) and that once you
+submitted a challenge it is removed from your home folder. For this reason
+I&rsquo;d like to thank very much the creator of UNIX to have put timestamps in files,
+so that I know which challenges I did in which order, all hail <code>ls -latr</code>!
+Foobar is also organized per &ldquo;levels&rdquo;, which contains a different number of
+challenges each time, my session had 1 for level 2, 2 for level 2, 3 for level
+3, <del>four</del> 2 for level 4 and 1 for level 5, all of which are organized in a
+chronological order below.
+But all this talk is boring for those interested in actual problems so I&rsquo;ll zap
+over the intelligence I gathered and begin on the actual challenges!</p>
+<h1 id="solar-doomsday">Solar Doomsday</h1>
+<p>Before talking about the challenges directly I&rsquo;d like to note that my codestyle
+habits evolved when doing those challenges because of a. one reason I&rsquo;ll explain
+at the bottom and b. I went to &ldquo;aww those challenges are easy&rdquo; to &ldquo;how was I
+even supposed to think about this??&quot;, but enough with my rants, let&rsquo;s get it on
+with the first challenge.</p>
+<p>This problem is pretty easy(and hopefully, knowing it is the first one): they
+ask you to decompose a number in squares and only put the largest squares you
+can in it. Solving it is pretty simple too: you get the biggest square that
+doesn&rsquo;t overflow your number, you remove the square from the number, repeat,
+nothing really hard there.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_biggest_square</span>(max_number):
+    n<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">while</span>(n<span style="color:#f92672">*</span>n <span style="color:#f92672">&lt;</span> max_number<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        n<span style="color:#f92672">=</span>n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">return</span> n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(area):
+    <span style="color:#66d9ef">if</span>(area <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1000000</span> <span style="color:#f92672">or</span> area <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Area is outside of bounds</span><span style="color:#e6db74">&#39;</span>)
+    array<span style="color:#f92672">=</span>[]
+    <span style="color:#66d9ef">while</span>(area <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>):
+        res<span style="color:#f92672">=</span>get_biggest_square(area)
+        array<span style="color:#f92672">.</span>append(res<span style="color:#f92672">*</span>res)
+        area<span style="color:#f92672">-</span><span style="color:#f92672">=</span>res<span style="color:#f92672">*</span>res
+        
+    <span style="color:#66d9ef">return</span> array</code></pre></div>
+<p>Oh yeah, last thing before we move on: Those versions are uncommented versions
+of the algorithms because this article is way too large already, I&rsquo;ll add a git
+repository at the end which keeps them as is to when I submitted them.
+Also sorry for making you miss the fun of the original questions but not only
+did I not saved them but this article would be huge if I had to embded them into
+it, so if one problem interests you, look it up!</p>
+<h1 id="ion-flux-relabelling">Ion Flux Relabelling</h1>
+<p>This one is pretty annoying to explain without technical talks about trees so
+here, take this from the original probmlem question I looked up online because I
+saved none of them!</p>
+<pre><code>   7
+ 3   6
+1 2 4 5
+
+Write a function answer(h, q) - where h is the height of the perfect tree of
+converters and q is a list of positive integers representing different flux
+converters - which returns a list of integers p where each element in p is the
+label of the converter that sits on top of the respective converter in q, or -1
+if there is no such converter.  For example, answer(3, [1, 4, 7]) would return
+the converters above the converters at indexes 1, 4, and 7 in a perfect binary
+tree of height 3, which is [3, 6, -1].
+</code></pre><p>Now that the problem make(at least some) sense I can say that this problem
+wasn&rsquo;t much harder than the last one but used some basics of CS theory, trees in
+that case, but could totally be solved without its knowledge.
+In this case we get the biggest element that can find a top(ie top-1) and if our
+number is between this and 0 it will have a number above it. We then do a
+recursive check; if the item is equal or inferior to the top of the left node
+then it is in the left node, otherwise proceed with the right with the same
+logic until we find the number as either the left node or right node, making it
+on top of those.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_item</span>(item,cur,dif):
+    right_node<span style="color:#f92672">=</span>cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    left_node<span style="color:#f92672">=</span>right_node<span style="color:#f92672">-</span>dif<span style="color:#f92672">/</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+
+    <span style="color:#66d9ef">if</span>(right_node<span style="color:#f92672">==</span>item <span style="color:#f92672">or</span> left_node<span style="color:#f92672">==</span>item):
+        <span style="color:#66d9ef">return</span> cur 
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">if</span>(item<span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span>left_node):
+            <span style="color:#66d9ef">return</span> find_item(item,left_node,dif<span style="color:#f92672">/</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> find_item(item,right_node,dif<span style="color:#f92672">/</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(h, q):
+    <span style="color:#66d9ef">if</span>(h <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">or</span> h <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Height is outside of bounds</span><span style="color:#e6db74">&#39;</span>)
+    <span style="color:#66d9ef">if</span>(len(q) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10000</span> <span style="color:#f92672">or</span> len(q) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Flux converters list is outside of bounds</span><span style="color:#e6db74">&#39;</span>)
+
+    items<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#f92672">*</span>h)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+    array<span style="color:#f92672">=</span>[]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(q)):
+        <span style="color:#66d9ef">if</span> (q[i]<span style="color:#f92672">&lt;</span>items <span style="color:#f92672">and</span> q[i]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>):
+            array<span style="color:#f92672">.</span>append(find_item(q[i],items,items<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+        <span style="color:#66d9ef">else</span>:
+            array<span style="color:#f92672">.</span>append(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">return</span> array </code></pre></div>
+<h1 id="en-route-salute">En Route Salute</h1>
+<p>I&rsquo;d say this one was easier than the last one when you figured out how to do it,
+as it required no real formal knowledge, but problems at this point are still
+pretty easy anyways so classifying them by difficulty makes little sense.
+In this case we were given a string containing &lt;, &gt; or - and we had to know the
+number of arrows that crossed, knowing that they all move one step at a time.
+To figure this out you just had to save the position of each arrow and figure
+out their distance: if a right arrow was on the left of a left arrow then
+they&rsquo;ll obviously cross.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(s):
+
+    <span style="color:#66d9ef">if</span>(len(s) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">or</span> len(s) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Height is outside of bounds</span><span style="color:#e6db74">&#39;</span>)
+    
+    s <span style="color:#f92672">=</span> list(s<span style="color:#f92672">.</span>replace(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>))
+    left <span style="color:#f92672">=</span> []
+    right <span style="color:#f92672">=</span> []
+    res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(s)):
+        <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;</span><span style="color:#e6db74">&#39;</span>:
+            left<span style="color:#f92672">.</span>append(i)
+        <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&gt;</span><span style="color:#e6db74">&#39;</span>:
+            right<span style="color:#f92672">.</span>append(i)
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> right:
+        <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> left:
+            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span> y:
+                res<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> left:
+        <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> right:
+            <span style="color:#66d9ef">if</span> y <span style="color:#f92672">&lt;</span> i:
+                res<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+                
+    <span style="color:#66d9ef">return</span> res </code></pre></div>
+<h1 id="fuel-injection-perfection">Fuel Injection Perfection</h1>
+<p>And the easy part stops here, this is where Foobar becomes really tricky and
+focus on what it likes most: tricky math questions! Unfortunately it seems more
+than a few share of people got this challenge and I ended up having the solution
+almost handed out to me when looking at stackoverflow(when someone tells you
+they&rsquo;re working on a &ldquo;challenge&rdquo; and the reduced test case looks about the same
+there isn&rsquo;t much doubt about it&hellip;). For some context you can do fairly easily
+the \(n^2\) way but the time limit is not really helping our case there.
+I also removed my asserts from this point forward for a reason I&rsquo;ll explain at
+the bottom of this article.
+It was still quite fun to understand though!<br>
+The problem is that given a number, and given 3 operations: add, remove, or
+divide per 2 only if the number is even, you have to find the quickest way to
+reduce this number to 1.
+If you can divide per 2, the answer is obvious: you do because that&rsquo;s the
+fastest way to cut down the number, but then the finicky part is: should you add or remove to the
+number to get to the result ASAP? Ie you can do 3-&gt;4-&gt;2-&gt;1 or you can do
+3-&gt;4-&gt;1, and the time limit doesn&rsquo;t allow us to try both for each given number.
+The answer to that happens to lie in binary: we calculate how to get the maximum
+of 000 in the rightmost bits, which in turn make us prefer to add when we are in
+a situation where we have 111, making us push to 000 and making the division per
+2 easier.
+Kind of a letdown to get spoiled but eh, we&rsquo;re getting in the territory of the
+&ldquo;if you don&rsquo;t know that you&rsquo;re screwed&rdquo;.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(n):
+    n<span style="color:#f92672">=</span>int(n)
+    res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">while</span>(n<span style="color:#f92672">!=</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span>(n<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+            n<span style="color:#f92672">=</span>n<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+        <span style="color:#66d9ef">elif</span>((n<span style="color:#f92672">==</span><span style="color:#ae81ff">3</span>) <span style="color:#f92672">or</span> ((n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">&amp;</span>n) <span style="color:#f92672">&gt;</span> ((n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">&amp;</span>(n<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>))):
+            n<span style="color:#f92672">-</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            n<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+        res<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">return</span> res</code></pre></div></p>
+<h1 id="queue-to-do">Queue To Do</h1>
+<p>Remember the problem before that one? Look up &ldquo;XOR Reduction&rdquo; and you have the
+same result for this one! This problem was about XORing reduction, as you could do it easily
+without the time/memory limit. See the cube of numbers below?</p>
+<pre><code>0 1 2 /
+3 4 / 5
+6 / 7 8
+</code></pre><p>Great, so this is a cube starting by 0, length of 3, the / are included to
+help with the problem. The point is to XOR all the numbers on the left side of
+the slash aka 0^1^2^3^4^6. The basic idea is to just xor everything in a loop
+and reduce by one each time the numbers to XOR, but for huge cubes this can take
+a long time and thus we had to figure out some XOR reduction for long lists like
+that. I tried my best to figure it out by myself but then again you can find
+plenty of XOR reduction resources on the net, so believe me as you wish I guess.
+For the theory basically XOR repeats itself when XORing lists of following
+numbers(the thing we&rsquo;re trying to reduce), so we can reduce a ton of XOR
+operations into an \(O(1)\) one, helping a lot, given a rotation noted below,
+differing for even and odd numbers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">xor</span>(a, b):
+    <span style="color:#66d9ef">if</span>(a<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+        xor_rotation <span style="color:#f92672">=</span> [b, <span style="color:#ae81ff">1</span>, b<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">else</span>:
+        xor_rotation<span style="color:#f92672">=</span> [a, a<span style="color:#f92672">^</span>b, a<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, (a<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">^</span>b]
+    <span style="color:#66d9ef">return</span> xor_rotation[(b<span style="color:#f92672">-</span>a)<span style="color:#f92672">%</span><span style="color:#ae81ff">4</span>]
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(start, length):
+    res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, length):
+        res <span style="color:#f92672">^</span><span style="color:#f92672">=</span> xor(start<span style="color:#f92672">+</span>(length<span style="color:#f92672">*</span>i), start<span style="color:#f92672">+</span>(length<span style="color:#f92672">*</span>i)<span style="color:#f92672">+</span>(length<span style="color:#f92672">-</span>i)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">return</span> res</code></pre></div>
+<h1 id="find-the-access-code">Find the access code</h1>
+<p>Look up &ldquo;lucky triples&rdquo; on stackoverflow, first result. I&rsquo;m not even kidding.
+With that even the people trying to figure it out themselves would cheat without
+wanting to, aaaaaaaaaargh.
+Either way the goal was to find lucky triples in a list, basically one number
+that divides another in a small-to-big order.
+Solving that even without looking it up is trivial though, you see if two
+numbers divide themselves, then you see if this other number divides another and
+boom you solved it.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(l):
+    triples <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    pairs <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>len(l)
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(l)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i):
+            <span style="color:#66d9ef">if</span>(l[i]<span style="color:#f92672">%</span>l[j]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+                pairs[i]<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, len(l)):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, i):
+            <span style="color:#66d9ef">if</span>(l[i]<span style="color:#f92672">%</span>l[j]<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+                triples <span style="color:#f92672">+</span><span style="color:#f92672">=</span> pairs[j]
+    <span style="color:#66d9ef">return</span> triples </code></pre></div></p>
+<h1 id="distract-the-guards">Distract the Guards</h1>
+<p>Ok so take back all I said about level 3 challenges and the copypasta fest it
+was, we are entering level 4, where challenges finally get interesting. I mean
+guard betting bananas on thumb wrestling kind of way, but still!
+Well then the problem is that we have a list of bananas, and we know guards pairing
+up in banana fights</p>
+<ul>
+<li>always bets the amount of the guy who have less bananas</li>
+<li>the guy who have less bananas always win.</li>
+</ul>
+<p>There is a catch though, when both gets an equal number of bananas they stop
+thumb wrestling. And we don&rsquo;t want that. Because we want them to keep being busy
+or something, guess their peripheral vision isn&rsquo;t quite as developped as animals
+yet.
+Anyways the first part of the problem is about combinatorics maths: knowing when
+the guard loops:<br>
+Let \(k\) be the largest positive integer such that \(a &gt; (2^k - 1)b\).<br>
+If \(a = b(2^k - 2^{m-1} - 1)\) or \(a = b(2^{k+1} - 2^m - 1)\) then we are in
+an infinite loop. We can deduce from that that if \(a+b\) is a power of two,
+for \(a+b\) being divided by their common divisor, then we are in a loop. <br>
+The second part is quite easy actually: you want to pair up the maximal amount
+in an infinite loop, so you find the infinite loops, pair the
+lowest-numbers-of-infinite-loop guard to the next-lowest-numbers-of-infinite-loop
+and you can find the maximum amount that can be paired!
+While the problem looks quite easy explained like that(I mean excepted the
+maths) I still began to switch to pen and paper from that point forward, as it
+was getting pretty theoric.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fractions <span style="color:#f92672">import</span> gcd
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">loops</span>(x, y):
+    res <span style="color:#f92672">=</span> (x<span style="color:#f92672">+</span>y)<span style="color:#f92672">/</span>gcd(x,y)
+    <span style="color:#66d9ef">return</span> bool(res <span style="color:#f92672">&amp;</span> (res <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>))
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove</span>(guards, ref):
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(guards)):
+        j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> 
+        <span style="color:#66d9ef">while</span> j <span style="color:#f92672">&lt;</span> len(guards[i]):
+            <span style="color:#66d9ef">if</span>(guards[i][j]<span style="color:#f92672">==</span>ref):
+                guards[i]<span style="color:#f92672">.</span>pop(j)
+            j<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> 
+    guards[ref]<span style="color:#f92672">=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(banana_list):
+    guards<span style="color:#f92672">=</span> [[] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(banana_list))]
+    bad<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(guards)):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(guards)):
+            <span style="color:#66d9ef">if</span>(loops(banana_list[i], banana_list[j])):
+                guards[i]<span style="color:#f92672">.</span>append(j)
+
+    to_process<span style="color:#f92672">=</span>len(banana_list)
+    <span style="color:#66d9ef">while</span>(to_process<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>):
+
+        min_num<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(guards)):
+            <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> (len(guards[i])<span style="color:#f92672">&lt;</span>len(guards[min_num]) <span style="color:#f92672">or</span> guards[min_num]
+                <span style="color:#f92672">==</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">and</span> guards[i]<span style="color:#f92672">!=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+                min_num<span style="color:#f92672">=</span>i
+
+        <span style="color:#66d9ef">if</span>((len(guards[min_num])) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> (len(guards[min_num])<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span>
+                guards[min_num][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> guards[min_num]) <span style="color:#f92672">and</span> guards[min_num] <span style="color:#f92672">!=</span>
+                [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+            remove(guards, min_num)
+            to_process<span style="color:#f92672">-</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+            bad<span style="color:#f92672">+</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            min_node<span style="color:#f92672">=</span>guards[min_num][<span style="color:#ae81ff">0</span>]
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(guards[min_num])):
+                <span style="color:#66d9ef">if</span>(i<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> guards[min_num][i]<span style="color:#f92672">!=</span>min_num <span style="color:#f92672">and</span> len(guards[guards[min_num][i]])<span style="color:#f92672">&lt;</span>len(guards[min_node])):
+                    min_node<span style="color:#f92672">=</span>guards[min_num][i]
+            <span style="color:#66d9ef">if</span>(guards[min_node]<span style="color:#f92672">!=</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]):
+                remove(guards, min_num)
+                remove(guards, min_node)
+                to_process<span style="color:#f92672">-</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+
+    <span style="color:#66d9ef">return</span> bad </code></pre></div>
+<h1 id="bringing-a-gun-to-a-guard-fight">Bringing a Gun to a Guard Fight</h1>
+<p>THIS ONE WAS WILD. SERIOUSLY. It have to be the one problem a raytracing
+engineer faced one day in his life and never forgot. Gosh it took me so much
+time to figure this one out, easily the hardest for me in this whole set of
+challenges.
+Basically you are in a room of given dimension and can shoot a laser beam that
+reflects on walls and you need to figure out exactly in which directions you can
+shoot so that it gets to your ennemy, given a max distance and your position.
+For that one problem I made a huge essay on how it works in the comments which
+I&rsquo;m going to post below:</p>
+<pre><code>The first thing you had to realize in order to solve this challenge is that you
+could simply mirror the room and check if the beam gets where you want. Let me
+show you:
+In our case let us make a room of dimension [3,2], with the position of the
+target at [1,2]. For the sake of simplicity let us imagine the beam is shot at
+[1,2] and so we are trying to shot ourselves. We get something like this:
+              -----
+              |*xx|
+              |xxx|
+              -----
+If we shoot with a vector of [1,0], aka straight ahead, we will get this result:
+              -----
+              |*~~|
+              |xxx|
+              -----
+We can see that the beam gets back to you directly, thanks to the reflection,
+and that the goal is achieved! But there is another way to do that:
+              ----- -----
+              |*~~| |~~*|
+              |xxx| |xxx|
+              ----- -----
+We can here realize that, by putting a mirror version of the room where the beam
+gets, we can make a straight line instead of calculating the reflection and see
+that it gets to our original target, [1,2], being ourselves!
+The good thing with that is that it also allows us to determine the distance
+needed by the beam to get through, and thus we can mirror the rooms up to the
+maximum distance easily.
+
+The next thing to realize was that room mirrors in a pattern, see the below
+diagram:
+              -----
+              |*xx|
+              |xxx|
+              -----
+     [...]    -----   [...]
+              |xxx|
+              |*xx|
+              -----
+  ----- ----- ----- ----- -----
+  |*xx| |xx*| |*xx| |xx*| |*xx|
+  |xxx| |xxx| |xxx| |xxx| |xxx|
+  ----- ----- ----- ----- -----
+              -----
+              |xxx|
+              |*xx|
+              -----
+     [...]    -----   [...]
+              |*xx|
+              |xxx|
+              -----
+x always repeats in the same way, and so does y
+Thus we need to figure out how to calculate how to mirror one room twice and we
+can make an entire atlas of mirrored rooms!
+In our case though the function below only calculates the mirrors of the point
+of coordinates node across an atlas of length (distance*2)^2
+</code></pre><p>Sooo the hard part about this was figuring out about the mirroring of the room.
+I was talking with a friend and when I told him about a specific thing that the
+problem stated on the rooms, that if you shoot in the corner it reflects
+perfectly we both had an Eureka moment: &ldquo;Wait, isn&rsquo;t the room reflection symmetric to
+itself?&rdquo; and then I looked up some 2D plane mirroring(which leaded to a ton of
+maths I didn&rsquo;t need actually and so I had to figure out a 1D transform on my
+own) and then just verify the angles and ensure the distance of the guard is
+before yourself.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mirror_atlas</span>(node, dimensions, distance):
+    node_mirrored<span style="color:#f92672">=</span>[]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(node)):
+        points<span style="color:#f92672">=</span>[]
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#f92672">-</span>(distance<span style="color:#f92672">/</span><span style="color:#f92672">/</span>dimensions[i])<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, (distance<span style="color:#f92672">/</span><span style="color:#f92672">/</span>dimensions[i]<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)):
+            points<span style="color:#f92672">.</span>append(get_mirror(j, node[i], dimensions[i]))
+        node_mirrored<span style="color:#f92672">.</span>append(points)
+    <span style="color:#66d9ef">return</span> node_mirrored
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_mirror</span>(mirror, coordinates, dimensions):
+    res<span style="color:#f92672">=</span>coordinates
+    mirror_rotation<span style="color:#f92672">=</span>[<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>coordinates, <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>(dimensions<span style="color:#f92672">-</span>coordinates)]
+    <span style="color:#66d9ef">if</span>(mirror<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span>):
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(mirror, <span style="color:#ae81ff">0</span>):
+            res<span style="color:#f92672">-</span><span style="color:#f92672">=</span>mirror_rotation[(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>]
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(mirror, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+            res<span style="color:#f92672">+</span><span style="color:#f92672">=</span>mirror_rotation[i<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>]
+    <span style="color:#66d9ef">return</span> res 
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(dimensions, your_position, guard_position, distance):
+    mirrored <span style="color:#f92672">=</span> [mirror_atlas(your_position, dimensions,
+        distance),mirror_atlas(guard_position, dimensions, distance)]
+    res<span style="color:#f92672">=</span>set()
+    angles_dist<span style="color:#f92672">=</span>{}
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(mirrored)):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> mirrored[i][<span style="color:#ae81ff">0</span>]:
+            <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> mirrored[i][<span style="color:#ae81ff">1</span>]:
+                beam<span style="color:#f92672">=</span>atan2((your_position[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>k), (your_position[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>j))
+                l<span style="color:#f92672">=</span>sqrt((your_position[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span>j)<span style="color:#f92672">*</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (your_position[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">-</span>k)<span style="color:#f92672">*</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)
+                <span style="color:#66d9ef">if</span> [j,k] <span style="color:#f92672">!=</span> your_position <span style="color:#f92672">and</span> distance <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> l:
+                    <span style="color:#66d9ef">if</span>((beam <span style="color:#f92672">in</span> angles_dist <span style="color:#f92672">and</span> angles_dist[beam] <span style="color:#f92672">&gt;</span> l) <span style="color:#f92672">or</span> beam <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> angles_dist):
+                        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                            angles_dist[beam] <span style="color:#f92672">=</span> l
+                        <span style="color:#66d9ef">else</span>:
+                            angles_dist[beam] <span style="color:#f92672">=</span> l
+                            res<span style="color:#f92672">.</span>add(beam)
+    <span style="color:#66d9ef">return</span> len(res) </code></pre></div>
+<h1 id="expanding-nebula">Expanding Nebula</h1>
+<p>Clearly the second hardest problem of this set, right after the banana thumb
+wrestling one.<br>
+You were given a 2D grid(matrix) of booleans and needed to figure out the number of
+possible permutations before it, knowing that a boolean is true if it had only
+one true neighbor(including itself, right, bottom and bottom right) and false otherwise.
+Since some cells cannot be calculated the grid loses one dimension in both axis
+at each step.
+The hard part of this is akin to the XOR Reduction problem, again: how the hell
+do we not go over the time limit?? For this we just setup an index for each cell
+of coordinates a,b given the last row + current move history to figure out if we
+already had a similar situation to avoid recursion, not really complicated but
+way harder to figure out than it looks(thanks Internet for that one).
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">answer</span>(state, a<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, past<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, solutions<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, history<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+    <span style="color:#66d9ef">if</span>(past<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>):
+        past<span style="color:#f92672">=</span>[[True] <span style="color:#f92672">*</span> (len(state[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(state)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+        solutions <span style="color:#f92672">=</span> {}
+        history <span style="color:#f92672">=</span> []
+
+    <span style="color:#66d9ef">if</span>(b<span style="color:#f92672">==</span>len(state[<span style="color:#ae81ff">0</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">return</span> True 
+
+    res<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+    index<span style="color:#f92672">=</span>((a,b), tuple(history[<span style="color:#f92672">-</span>(len(state)<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>):]))
+    <span style="color:#66d9ef">if</span> index <span style="color:#f92672">in</span> solutions:
+        <span style="color:#66d9ef">return</span> solutions[index]
+
+    <span style="color:#66d9ef">for</span> cell <span style="color:#f92672">in</span> [True, False]:
+        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">not</span> a <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> b) <span style="color:#f92672">or</span> len(set([((past[a][b<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> past[a<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][b]
+            <span style="color:#f92672">+</span> past[a<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][b<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> cell)<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>), state[a<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][b<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]))<span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>:
+                history<span style="color:#f92672">.</span>append(cell)
+                past[a][b] <span style="color:#f92672">=</span> cell
+                res<span style="color:#f92672">+</span><span style="color:#f92672">=</span>answer(state, a<span style="color:#f92672">=</span>(a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">%</span>(len(state)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>),
+                        b<span style="color:#f92672">=</span>b<span style="color:#f92672">+</span>(a<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">/</span><span style="color:#f92672">/</span>(len(state)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), past<span style="color:#f92672">=</span>past,
+                        solutions<span style="color:#f92672">=</span>solutions, history<span style="color:#f92672">=</span>history)
+                history<span style="color:#f92672">.</span>pop()
+
+    solutions[index]<span style="color:#f92672">=</span>res
+    <span style="color:#66d9ef">return</span> res</code></pre></div></p>
+<h1 id="end-and-hack-stuff">End and hack stuff</h1>
+<p>Here we are, we finished all the challenges, we can use <code>recruitme</code> whenever to
+spam employers with our wits, and we even have a nice cipher to end this game
+on!
+<figure>
+    <img src="assets/my_beautiful_eyes.png"/> <figcaption>
+            <h4>Awww, even thinking of greeting me in the encrypted end screen, how nice!</h4>
+        </figcaption>
+</figure>
+
+So I see the ending = sign, must be base64, also&hellip;wait&hellip; &ldquo;HEYGA&rdquo;. Oh no it
+can&rsquo;t be&hellip;</p>
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> base64
+encrypted<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">HEYGAwIKCxQSUlZbSUkAExAXFU5CR0YWGQ0FCwYGABNGSVRHRhAFFQwLCgQRUU1JSQIHExkTHR1AQU9WRgAABBMQEggLAgJGWVZGCA0PCBAABAQLCRVSVltJSRIPGRkCAgsDRllWRhsPBQMcAhJOTl1BUgUADwtATVVRBwYBQEFPVkYeBwlAUgs=</span><span style="color:#e6db74">&#34;</span>
+my_eyes<span style="color:#f92672">=</span>str<span style="color:#f92672">.</span>encode(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">gauvain</span><span style="color:#e6db74">&#34;</span>)
+decoded<span style="color:#f92672">=</span>base64<span style="color:#f92672">.</span>b64decode(encrypted)
+decrypted<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(decoded)):
+    decrypted<span style="color:#f92672">+</span><span style="color:#f92672">=</span>chr((my_eyes[i<span style="color:#f92672">%</span>len(my_eyes)] <span style="color:#f92672">^</span> decoded[i]))
+<span style="color:#66d9ef">print</span>(decrypted)</code></pre></div>
+Yup, they used my name as the key with a simple XORPad, which is definitely not
+something I ever used(I mean except on the KH hacking scene for kh2patches, 3ds
+to decrypt games, etc&hellip;)
+For those that don&rsquo;t know a rolling XORPad is notoriously known to be &ldquo;bad&rdquo;
+encryption as you can figure out the key fairly easily by noting patterns of
+repeating data, especially on a small key like this. My foobar username being
+&ldquo;gauvain&rdquo; and the end screen showing the &ldquo;your&rdquo; emphasized, on top of the base64
+string beginning by &ldquo;HEYGA&rdquo; gave it away(and made me smile that ciphers greet me
+nowadays).</p>
+<pre><code>➜  foobar python end.py
+{'success' : 'great', 'colleague' : 'esteemed', 'efforts' : 'incredible', 'achievement' : 'unlocked', 'rabbits' : 'safe', 'foo' : 'win!'}
+</code></pre><p>And thus Foobar concluded&hellip;or did it? Actually there&rsquo;s a thing I haven&rsquo;t told
+you and I spent most of my time on during Expanding nebula: remember when I told
+you I stopped using asserts at some points? Yeah no I&rsquo;m not gaslighting you I
+actually wrote it between the lines of this incomprehensible tech mombo jumbo,
+well there was a simple reason for that:</p>
+<p>When using asserts in Foobar in my answers questions, I right away saw that they
+removed the custom text you put there and only keep type and line of the
+exceptions, like this:</p>
+<pre><code>foobar:~/expanding_nebula gauvain$ verify solution.py 
+Verifying solution...
+MemoryError [line 13] 
+</code></pre><p>But then later I misindented some of my foobar asserts, running in the global
+scope and I realized I somehow had the text printed this time&hellip;? At this point
+I decided to drop off the asserts and wait for the final challenge to have more
+time to understand if I could take advantage of that, and I did!</p>
+<figure>
+    <img src="assets/oops.png"/> <figcaption>
+            <h4>Oh, you&#39;re giving me your source code?</h4>
+        </figcaption>
+</figure>
+
+<p>I had full read access to the VM. Time to dump everything!<br>
+It took me something like one hour of painfully editing stupid dumping scripts
+just to dump one file because of the 1mb memory limit, also had a limit on how
+much files were opened and time limit so I had to edit by hand my dumping
+scripts but eventually&hellip;</p>
+<pre><code>➜  ~ file ~/Documents/PROJECTS/PROGRAMMING/SOFTWARES/foobar/hack/dump/export/pypy/bin/pypy
+/home/arnab1saha/Documents/PROJECTS/PROGRAMMING/SOFTWARES/foobar/hack/dump/export/pypy/bin/pypy: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.26, BuildID[sha1]=a4cfb928b3d0a034b2b94b0c2b19b89ef75369cc, stripped
+</code></pre><p>Woop, full dump! So now time to study foobar test VM:
+it contains 2 folders, /tmp and /pypy, with one file, /main.py, which executes
+our code. In a nutshell this one does read from the file descriptor 3 the
+source code, the function, try to locate if it exists and then execute it for
+each test case given by the file descriptor 3, writing each time the result to
+this mystery 3 again. From this point forward we have pretty much got code
+execution into Foobar but that is laaaame, the pypy binary is kinda old, 2016 to
+be exact, so let&rsquo;s get some RCE, will we? To be honest though this was really
+unecessary as no real checks are in place to lock down our code, as the VM is
+ALREADY locked down: no network, time limited, read-only, not fun, and we could
+still interact with the file descriptor without getting an RCE to leak the test
+data.
+And that&rsquo;s pretty much where I stand by now: the VM is locked down by nsjail
+through the intel I got, which while having a fairly small codebase(5k) it
+relies on concepts I am not super familiar with and core Linux namespaces, which
+seems pretty solid, so so far no dice for me, otherwise I&rsquo;d have written a more
+clickbait article on &ldquo;How I hacked google&rdquo; and would be in a bunch of random
+hacking articles. I guess. Or I would&rsquo;ve totally been forgotten and just have
+bragging rights nobody cares about, that works too.
+Either way I am dead set on getting a sandbox escape from nsjail one day, but I
+haven&rsquo;t been able to do much so far, sorry to end on something so anti-climatic
+but hey, what did you expected? I&rsquo;m still 19.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>And we made it, gosh finally. I hope I haven&rsquo;t skipped too much for your
+understanding or that my regular writing style didn&rsquo;t took too much of an hit
+from that(don&rsquo;t worry I&rsquo;m still silly) but I had 9 challenges to talk about and
+a hacking part&hellip;so I tried to condense a bit this article. Either way there
+wasn&rsquo;t a lot to talk about on how I figured out the problems, up to level 2(3
+first challenges) it was basically &ldquo;just code and think later&rdquo;, level 3 was
+&ldquo;how good can you be at looking up stuff on the internet&rdquo;, but level 4 and level
+5 were more intricate. For example when first looking up the levl 4 stuff I had
+written a test case of all the numbers that loops and tried to pair them in a
+simple fashion in the best way possible, which ended up being lesser used node A
+to lesser used node B.<br>
+So yeah, I had way too much things I wished to talk about but couldn&rsquo;t, if you
+wanted to know more about foobar aesthetics I guess you should look it up online
+too, or just get this js and css and do a basic webpage from that ;)
+<a href="http://web.archive.org/web/20180916011049/https://foobar.withgoogle.com/staticfiles/css/rhgame.68224f06.css">The CSS</a>
+and <a href="http://web.archive.org/web/20180916011152/https://foobar.withgoogle.com/staticfiles/js/rhgame.17566226.js">the JS</a><br>
+They&rsquo;re archived directly from the domain using the Web Archive, so it&rsquo;s pretty
+much guarenteed that I haven&rsquo;t edited them myself.<br>
+As for foobar itself, was it the hardest challenge I ever faced? Hell no, have
+you even seen the 34c3 CTF for example? That was wild, moreso if you were there.
+It was still fairly funny but I feel like too much challenges relied on stuff
+you could just look up fairly quickly on the net and not on actual logic, which
+is what you&rsquo;d want to test someone on I guess, unless your point was to know if
+they could absorb infos to improve or something, but then I have no idea how
+you&rsquo;ll tell legit from fakes. Oh wait you most likely don&rsquo;t since it&rsquo;s invite
+only, well this explains that I guess.<br>
+There&rsquo;s one thing I can say about foobar that I think is really neat though: I
+finished the 9 challenges of foobar in less than 200 lines of code and I&rsquo;m sure
+I could&rsquo;ve done better, so this seems pretty accurate of the code quality that
+someone can produce(or if he just calculates a bunch of predefined answers like
+I almost did for Expanding Nebula&hellip;seriously that thing was some hell).<br>
+Ah yeah for the people wanting to do Foobar without using Google or just
+spamming ranodm keywords there(trust me I tried), there is more than one way to
+get in. Seriously just keep looking, you&rsquo;ll find a way through eventually.</p>
+<p>Anyways I hoped you liked this article as much as I liked writing it, the
+challenge was really fun, albeit a bitoverhyped. I now have my second Google
+referral for a job to use whenever the hell I want though! But yeah, Google Foobar is
+really just a glorified month-spanning interview for Google, no new Cicada 3301
+lying under the lines(I should actually look at the Liber Primus one day by the
+way, sounds like a fun way to waste time trying to decrypt garbage).
+On my side I successfully hacked something else while working on Foobar, which I
+have no idea if I&rsquo;m going to even talk about it because of its sensitive nature
+buuut that really helped me getting back into CS after this Linux work and me
+not understanding a thing about some parts of the kernel. So I guess we&rsquo;ll see
+if I&rsquo;ll make an article about it!</p>
+<p>Meanwhile as promised my code is available in full
+<a href="https://code.govanify.com/govanify/foobar">there</a>, if this wall of text actually
+inspired you or something.</p>
+
+  </section>
+</article>
+
+</main>
+
+
+<script defer src="assets/ui.min.js"></script>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; Handcrafted with with Lots of Love, ☕ and ❤️ by <b>Arnab Saha</b></span>
+  </div>
+</footer>
+
+</div>
+</div>
+</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+  </script>
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="assets/style.min.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/katex.min.css"/>
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+</body>
+</html>
+
+
