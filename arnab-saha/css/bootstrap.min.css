@@ -3747,7 +3747,7 @@ a:hover:focus {
 
 .Dlinecap { stroke-linecap: round; stroke-linejoin: round; }
 
-.f5dc5111-2055-42b6-8616-bac4e1ff455b { clip-path: url(#5105e572-a1ac-482c-a41a-a574d3560ea8); } 
+.f5dc5111-2055-42b6-8616-bac4e1ff455b { clip-path: url(#5105e572-a1ac-482c-a41a-a574d3560ea8); }
 
 .38bac8546-6e49-424c-841b-4cd2490ad711 { clip-path: url(#3ef8c518-3253-401c-98e4-56eb72b19d6a); }
 
@@ -4131,14 +4131,7 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--1 .record__image{
-    background-image:url(../images/ghostofme_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--1 .record__image{
-        background-image:url(../images/ghostofme_low.jpg)
-    }
-}
+
 .record--2{
     top:5%;
     right:5%;
@@ -4161,14 +4154,7 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--2 .record__image{
-    background-image:url(../images/relinquish_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--2 .record__image{
-        background-image:url(../images/relinquish_low.jpg)
-    }
-}
+
 .record--3{
     top:10%;
     right:10%;
@@ -4190,14 +4176,6 @@ a:hover:focus {
     top:20%;
     width:10%;
     height:10%
-}
-.records--1 .record--3 .record__image{
-    background-image:url(../images/aurevoir_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--3 .record__image{
-        background-image:url(../images/aurevoir_low.jpg)
-    }
 }
 
 .record--4{
@@ -4222,14 +4200,6 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--4 .record__image{
-    background-image:url(../images/ifonly_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--4 .record__image{
-        background-image:url(../images/ifonly_low.jpg)
-    }
-}
 
 .record--5{
     top:20%;
@@ -4252,14 +4222,6 @@ a:hover:focus {
     top:40%;
     width:10%;
     height:10%
-}
-.records--1 .record--5 .record__image{
-    background-image:url(../images/evajepson_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--5 .record__image{
-        background-image:url(../images/evajepson_low.jpg)
-    }
 }
 
 .record--6{
@@ -4284,14 +4246,7 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--6 .record__image{
-    background-image:url(../images/thinkingofyou_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--6 .record__image{
-        background-image:url(../images/thinkingofyou_low.jpg)
-    }
-}
+
 
 .record--7{
     top:30%;
@@ -4315,14 +4270,7 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--7 .record__image{
-    background-image:url(../images/wontowa_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--7 .record__image{
-        background-image:url(../images/wontowa_low.jpg)
-    }
-}
+
 
 .record--8{
     top:35%;
@@ -4346,14 +4294,7 @@ a:hover:focus {
     width:10%;
     height:10%
 }
-.records--1 .record--8 .record__image{
-    background-image:url(../images/wandering_low.jpg)
-}
-@media (min-width: 600px){
-    .records--1 .record--8 .record__image{
-        background-image:url(../images/wandering_low.jpg)
-    }
-}
+
 .option{
     position:absolute;
     right:2em;
