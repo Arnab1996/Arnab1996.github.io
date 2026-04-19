@@ -1,0 +1,242 @@
+/* ================================================================
+   ANIMATIONS.CSS — Keyframes and base animation utilities
+   ================================================================ */
+
+/* --- Page loader --- */
+@keyframes loader-draw {
+  0% {
+    stroke-dashoffset: 200;
+    fill-opacity: 0;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes loader-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.page-loader.loaded {
+  animation: loader-fade-out 0.4s var(--ease-out) forwards;
+  animation-delay: 0.4s;
+}
+
+.page-loader svg text {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  stroke: url(#gradient-brand);
+  stroke-width: 1.5;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  fill: url(#gradient-brand);
+  fill-opacity: 0;
+  animation: loader-draw 1.2s var(--ease-out) forwards;
+}
+
+/* --- Scroll reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s var(--ease-out),
+              transform 0.6s var(--ease-out);
+}
+
+/* Staggered children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal-stagger.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s var(--ease-out),
+              transform 0.5s var(--ease-out);
+}
+
+.reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.revealed > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.revealed > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.revealed > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger.revealed > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger.revealed > *:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger.revealed > *:nth-child(7) { transition-delay: 0.48s; }
+.reveal-stagger.revealed > *:nth-child(8) { transition-delay: 0.56s; }
+.reveal-stagger.revealed > *:nth-child(9) { transition-delay: 0.64s; }
+
+/* --- Scroll indicator bounce --- */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.scroll-indicator {
+  animation: scroll-bounce 2s var(--ease-out) infinite;
+}
+
+/* --- Float animation (company logos) --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* --- Gradient border pulse (current role) --- */
+@keyframes gradient-pulse {
+  0%, 100% {
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
+  }
+  50% {
+    border-color: var(--accent-ember);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+  }
+}
+
+.pulse-border {
+  animation: gradient-pulse 3s ease-in-out infinite;
+}
+
+/* --- Fade variants for GSAP fallback --- */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Counter fill --- */
+@keyframes counter-fill {
+  from { width: 0; }
+}
+
+/* --- Wave hand animation (hero greeting) --- */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-emoji {
+  display: inline-block;
+  font-size: 1.2em;
+  transform-origin: 70% 70%;
+  animation: wave 2.5s ease-in-out 0.5s 2;
+}
+
+/* --- Page entrance sparkle burst --- */
+@keyframes sparkle-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(360deg);
+  }
+}
+
+.entrance-sparkle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 401;
+  animation: sparkle-entrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- Hero text entrance stagger --- */
+@keyframes hero-text-enter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-greeting {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+.hero-name {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+
+.hero-subtitle {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.0s both;
+}
+
+.hero-content > .hero-text > .text-muted {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+}
+
+.hero-cta {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+}
+
+.hero-card {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.0s both;
+}
+
+.hero-scroll {
+  animation: hero-text-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
+}
+
+/* --- Spin (for loader fallback) --- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

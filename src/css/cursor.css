@@ -1,0 +1,72 @@
+/* ================================================================
+   CURSOR.CSS — Custom cursor overlay styles
+   System cursor NEVER hidden — this is purely decorative
+   ================================================================ */
+
+/* Cursor ring overlay */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.3s var(--ease-spring),
+              height 0.3s var(--ease-spring),
+              border-color 0.2s var(--ease-out),
+              background 0.2s var(--ease-out);
+  will-change: transform;
+  mix-blend-mode: difference;
+}
+
+/* Hovering interactive elements */
+.cursor-ring.hovering {
+  width: 48px;
+  height: 48px;
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+/* Clicking */
+.cursor-ring.clicking {
+  width: 24px;
+  height: 24px;
+  border-color: rgba(124, 58, 237, 0.6);
+}
+
+/* Hovering images */
+.cursor-ring.on-image {
+  width: 48px;
+  height: 48px;
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide on touch devices and when keyboard navigating */
+@media (hover: none) {
+  .cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Light theme ring */
+[data-theme="light"] .cursor-ring {
+  border-color: rgba(0, 0, 0, 0.1);
+  mix-blend-mode: normal;
+}
+
+[data-theme="light"] .cursor-ring.hovering {
+  background: rgba(109, 40, 217, 0.08);
+  border-color: rgba(109, 40, 217, 0.3);
+}
+
+/* Hide when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-ring {
+    display: none !important;
+  }
+}

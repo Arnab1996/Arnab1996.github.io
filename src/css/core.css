@@ -1,0 +1,223 @@
+/* ================================================================
+   CORE.CSS — Design tokens, CSS reset, base typography
+   Portfolio: Arnab Saha | "Aut inveniam viam aut faciam"
+   ================================================================ */
+
+/* --- Design Tokens --- */
+:root {
+  /* Colors — Dark theme (default) */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0f172a;
+  --surface-solid: #1a1a2e;
+  --surface-elevated: #1e1e3a;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-blur: 12px;
+  --glass-saturate: 180%;
+
+  /* Accents — violet = creation energy, ember = fire/way */
+  --accent-violet: #7c3aed;
+  --accent-violet-light: #a855f7;
+  --accent-ember: #f97316;
+  --accent-ember-light: #fb923c;
+  --accent-cyan: #06b6d4;
+  --accent-green: #22c55e;
+
+  /* Gradient signature */
+  --gradient-brand: linear-gradient(135deg, var(--accent-violet), var(--accent-ember));
+  --gradient-brand-hover: linear-gradient(135deg, var(--accent-violet-light), var(--accent-ember-light));
+  --gradient-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(249, 115, 22, 0.15));
+
+  /* Text */
+  --text-heading: #f1f5f9;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-accent: var(--accent-violet-light);
+
+  /* Typography */
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Outfit Variable', 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Font sizes — fluid scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.3vw, 0.875rem);
+  --text-base: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+  --text-lg: clamp(1.05rem, 0.95rem + 0.5vw, 1.2rem);
+  --text-xl: clamp(1.2rem, 1rem + 0.8vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --text-3xl: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
+  --text-4xl: clamp(2.2rem, 1.6rem + 2.5vw, 3.5rem);
+  --text-hero: clamp(3rem, 2rem + 4vw, 6rem);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow-violet: 0 0 20px rgba(124, 58, 237, 0.3);
+  --shadow-glow-ember: 0 0 20px rgba(249, 115, 22, 0.3);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+
+  /* Z-index scale */
+  --z-background: -1;
+  --z-base: 0;
+  --z-elevated: 10;
+  --z-navbar: 100;
+  --z-modal: 200;
+  --z-cursor: 300;
+  --z-loader: 400;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --navbar-height: 64px;
+}
+
+/* --- CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-body);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--accent-violet-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --- Selection --- */
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: var(--text-heading);
+}
+
+/* --- Focus visible --- */
+:focus-visible {
+  outline: 2px solid var(--accent-violet);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-elevated);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-violet);
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  canvas {
+    display: none !important;
+  }
+}

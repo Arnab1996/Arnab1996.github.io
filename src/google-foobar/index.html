@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170483322-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-170483322-1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnab Saha | Solving Google Foobar</title>
+  <meta name="description" content="Solving all 9 Google Foobar challenges and hacking the test VM along the way. Full writeup with Python solutions, explanations, and a peek behind the curtain.">
+  <meta property="og:title" content="Solving Google Foobar and hacking it along the way">
+  <meta property="og:description" content="Solving all 9 Google Foobar challenges and hacking the test VM along the way. Full writeup with Python solutions and explanations.">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="module" src="/sub-page-app.js"></script>
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <svg width="120" height="60" viewBox="0 0 120 60">
+      <defs>
+        <linearGradient id="gradient-brand" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#f97316" />
+        </linearGradient>
+      </defs>
+      <text x="10" y="45">A$</text>
+    </svg>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar-brand">A$ <span aria-hidden="true">🔥</span></a>
+    <div class="navbar-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#timeline">Journey</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <a href="/Arnab_Saha_Resume_1_page.pdf" class="navbar-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+    <button class="navbar-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#timeline">Journey</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#contact">Contact</a>
+    <a href="/Arnab_Saha_Resume_1_page.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+
+  <main class="sub-page">
+
+    <!-- Header -->
+    <section class="sub-page-header reveal">
+      <div class="container">
+        <h1>Solving Google Foobar</h1>
+        <p>...and hacking it along the way</p>
+        <div class="badge-group">
+          <span class="badge">Python</span>
+          <span class="badge">Algorithms</span>
+          <span class="badge">Security Research</span>
+          <span class="badge">Google</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <a href="/" class="back-link">&larr; Back to Home</a>
+    </div>
+
+    <!-- Two-column layout: TOC + Content -->
+    <div class="container article-with-toc">
+
+      <!-- Table of Contents Sidebar -->
+      <aside class="toc-sidebar glass">
+        <h3>Table of Contents</h3>
+        <nav>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#solar-doomsday">Solar Doomsday</a></li>
+            <li><a href="#ion-flux-relabelling">Ion Flux Relabelling</a></li>
+            <li><a href="#en-route-salute">En Route Salute</a></li>
+            <li><a href="#fuel-injection-perfection">Fuel Injection Perfection</a></li>
+            <li><a href="#queue-to-do">Queue To Do</a></li>
+            <li><a href="#find-the-access-code">Find the Access Code</a></li>
+            <li><a href="#distract-the-guards">Distract the Guards</a></li>
+            <li><a href="#bringing-a-gun-to-a-guard-fight">Bringing a Gun to a Guard Fight</a></li>
+            <li><a href="#expanding-nebula">Expanding Nebula</a></li>
+            <li><a href="#end-and-hack-stuff">End &amp; Hack Stuff</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Article Content -->
+      <div class="article-content">
+
+        <!-- Introduction -->
+        <section id="introduction" class="reveal">
+          <h2>Introduction</h2>
+          <p>
+            Recently I learned about the existence of what is known as
+            <a href="https://google.com/foobar/" target="_blank" rel="noopener">Google Foobar</a>,
+            also known as "Google's secret recruiting program" or "How many bunnies can you rescue
+            before wanting to kill someone." Being the stubborn person that I am, I decided to force
+            my way in and try the challenges.
+          </p>
+          <p>
+            I didn't expect to be able to get in, but it seems I did, so I guess I'm indebted
+            to do a writeup or something.
+          </p>
+          <p>
+            Foobar is basically a website containing a unix-like shell based on "jQuery Terminal,"
+            which has some standard unix commands -- including some that aren't listed in the
+            <code>help</code> command, namely <code>mount</code> or <code>cat</code>.
+            When you access Foobar they prompt you to use <code>request</code> whenever you're ready,
+            which sends a POST to <code>https://foobar.withgoogle.com/api/v1/commands/request/</code>
+            and adds a folder into your home directory. That folder always contains 4 files:
+            <code>solution.py</code>, <code>solution.java</code>, <code>constraints.txt</code>,
+            and <code>readme.txt</code>.
+          </p>
+          <p>
+            Foobar is organized by levels. My session had 1 challenge for level 1, 2 for level 2,
+            3 for level 3, 2 for level 4, and 1 for level 5 -- all presented below in chronological
+            order.
+          </p>
+        </section>
+
+        <!-- Challenge 1: Solar Doomsday -->
+        <div id="solar-doomsday" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Solar Doomsday</h3>
+            <span class="difficulty-badge difficulty-easy">Level 1 &middot; Easy</span>
+          </div>
+          <p>
+            This problem is pretty easy (and hopefully so, knowing it is the first one): they ask
+            you to decompose a number into squares, using only the largest squares that fit. Solving
+            it is straightforward -- get the biggest square that doesn't overflow your number, subtract
+            it, and repeat. Nothing really hard there.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def get_biggest_square(max_number):
+    n = 1
+    while(n * n < max_number + 1):
+        n = n + 1
+    return n - 1
+
+def answer(area):
+    if(area > 1000000 or area < 1):
+        raise ValueError('Area is outside of bounds')
+    array = []
+    while(area != 0):
+        res = get_biggest_square(area)
+        array.append(res * res)
+        area -= res * res
+    return array</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 2: Ion Flux Relabelling -->
+        <div id="ion-flux-relabelling" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Ion Flux Relabelling</h3>
+            <span class="difficulty-badge difficulty-easy">Level 2 &middot; Easy</span>
+          </div>
+          <p>
+            This one involves binary trees. Given a perfect binary tree labeled in post-order:
+          </p>
+<pre><code>   7
+ 3   6
+1 2 4 5</code></pre>
+          <p>
+            Write a function <code>answer(h, q)</code> where <code>h</code> is the height
+            of the tree and <code>q</code> is a list of node labels. Return the parent of each
+            node, or -1 if there is no parent. For example,
+            <code>answer(3, [1, 4, 7])</code> returns <code>[3, 6, -1]</code>.
+          </p>
+          <p>
+            The approach: get the root element, then do a recursive check. If the item is less than
+            or equal to the top of the left subtree, search left; otherwise search right. Continue
+            until you find the target as a direct child.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def find_item(item, cur, dif):
+    right_node = cur - 1
+    left_node = right_node - dif // 2
+
+    if(right_node == item or left_node == item):
+        return cur
+    else:
+        if(item <= left_node):
+            return find_item(item, left_node, dif // 2)
+        else:
+            return find_item(item, right_node, dif // 2)
+
+def answer(h, q):
+    if(h > 30 or h < 1):
+        raise ValueError('Height is outside of bounds')
+    if(len(q) > 10000 or len(q) < 1):
+        raise ValueError('Flux converters list is outside of bounds')
+
+    items = (2 ** h) - 1
+    array = []
+    for i in range(len(q)):
+        if (q[i] < items and q[i] > 0):
+            array.append(find_item(q[i], items, items - 1))
+        else:
+            array.append(-1)
+    return array</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 3: En Route Salute -->
+        <div id="en-route-salute" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>En Route Salute</h3>
+            <span class="difficulty-badge difficulty-easy">Level 2 &middot; Easy</span>
+          </div>
+          <p>
+            Given a string containing <code>&lt;</code>, <code>&gt;</code>, or <code>-</code>,
+            figure out the number of arrows that cross, knowing they all move one step at a time.
+            Save the position of each arrow and figure out their distance: if a right-facing arrow
+            is to the left of a left-facing arrow, they'll obviously cross.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def answer(s):
+    if(len(s) > 100 or len(s) < 1):
+        raise ValueError('Height is outside of bounds')
+
+    s = list(s.replace("-", ""))
+    left = []
+    right = []
+    res = 0
+
+    for i in range(0, len(s)):
+        if s[i] == '&lt;':
+            left.append(i)
+        if s[i] == '&gt;':
+            right.append(i)
+
+    for i in right:
+        for y in left:
+            if i &lt; y:
+                res += 1
+    for i in left:
+        for y in right:
+            if y &lt; i:
+                res += 1
+
+    return res</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 4: Fuel Injection Perfection -->
+        <div id="fuel-injection-perfection" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Fuel Injection Perfection</h3>
+            <span class="difficulty-badge difficulty-medium">Level 3 &middot; Medium</span>
+          </div>
+          <p>
+            This is where Foobar becomes tricky and focuses on math. Given a number and three
+            operations (add 1, subtract 1, or divide by 2 if even), find the fewest steps to
+            reduce it to 1.
+          </p>
+          <p>
+            If you can divide by 2, you always should. The tricky part is deciding whether to
+            add or subtract when the number is odd. The answer lies in binary: maximize trailing
+            zeros. When you see <code>...111</code> in binary, adding 1 pushes to <code>...000</code>,
+            making future divisions faster.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def answer(n):
+    n = int(n)
+    res = 0
+
+    while(n != 1):
+        if(n % 2 == 0):
+            n = n / 2
+        elif((n == 3) or ((n + 1) &amp; n) > ((n - 1) &amp; (n - 2))):
+            n -= 1
+        else:
+            n += 1
+        res += 1
+    return res</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 5: Queue To Do -->
+        <div id="queue-to-do" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Queue To Do</h3>
+            <span class="difficulty-badge difficulty-medium">Level 3 &middot; Medium</span>
+          </div>
+          <p>
+            This problem is about XOR reduction. Given a grid of sequential numbers:
+          </p>
+<pre><code>0 1 2 /
+3 4 / 5
+6 / 7 8</code></pre>
+          <p>
+            XOR all numbers to the left of the slash (0^1^2^3^4^6). The naive loop is too slow
+            for huge grids, so you exploit the fact that XOR of consecutive numbers repeats in a
+            4-element cycle, reducing each row's XOR to O(1).
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def xor(a, b):
+    if(a % 2 == 0):
+        xor_rotation = [b, 1, b + 1, 0]
+    else:
+        xor_rotation = [a, a ^ b, a - 1, (a - 1) ^ b]
+    return xor_rotation[(b - a) % 4]
+
+def answer(start, length):
+    res = 0
+    for i in range(0, length):
+        res ^= xor(start + (length * i), start + (length * i) + (length - i) - 1)
+    return res</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 6: Find the Access Code -->
+        <div id="find-the-access-code" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Find the Access Code</h3>
+            <span class="difficulty-badge difficulty-medium">Level 3 &middot; Medium</span>
+          </div>
+          <p>
+            The goal is to find "lucky triples" in a list -- ordered triplets (a, b, c) where
+            a divides b and b divides c. Check if pairs of numbers divide each other, then extend
+            those pairs into triples. For each element, count how many earlier elements divide it
+            (pairs), then for each later element that it divides, add the pair count to the triple count.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def answer(l):
+    triples = 0
+    pairs = [0] * len(l)
+
+    for i in range(1, len(l) - 1):
+        for j in range(i):
+            if(l[i] % l[j] == 0):
+                pairs[i] += 1
+    for i in range(2, len(l)):
+        for j in range(1, i):
+            if(l[i] % l[j] == 0):
+                triples += pairs[j]
+    return triples</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 7: Distract the Guards -->
+        <div id="distract-the-guards" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Distract the Guards</h3>
+            <span class="difficulty-badge difficulty-hard">Level 4 &middot; Hard</span>
+          </div>
+          <p>
+            Level 4 is where challenges get interesting. Guards pair up in banana-based thumb
+            wrestling: the one with fewer bananas always bets that amount and always wins. When
+            both have equal bananas, they stop. We need to maximize the number of pairs stuck
+            in infinite loops.
+          </p>
+          <p>
+            The math: if (a+b), divided by gcd(a,b), is a power of two, the game terminates.
+            Otherwise it loops forever. The second part is a greedy matching: pair guards with
+            the fewest loop-partners first, matching them to the next-fewest partner.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">from fractions import gcd
+
+def loops(x, y):
+    res = (x + y) / gcd(x, y)
+    return bool(res &amp; (res - 1))
+
+def remove(guards, ref):
+    for i in range(len(guards)):
+        j = 0
+        while j &lt; len(guards[i]):
+            if(guards[i][j] == ref):
+                guards[i].pop(j)
+            j += 1
+    guards[ref] = [-1]
+
+def answer(banana_list):
+    guards = [[] for i in range(len(banana_list))]
+    bad = 0
+
+    for i in range(len(guards)):
+        for j in range(len(guards)):
+            if(loops(banana_list[i], banana_list[j])):
+                guards[i].append(j)
+
+    to_process = len(banana_list)
+    while(to_process > 0):
+        min_num = 0
+        for i in range(len(guards)):
+            if(i != 0 and (len(guards[i]) &lt; len(guards[min_num]) or guards[min_num]
+                == [-1]) and guards[i] != [-1]):
+                min_num = i
+
+        if((len(guards[min_num])) == 0 or (len(guards[min_num]) == 1 and
+                guards[min_num][0] == guards[min_num]) and guards[min_num] !=
+                [-1]):
+            remove(guards, min_num)
+            to_process -= 1
+            bad += 1
+        else:
+            min_node = guards[min_num][0]
+            for i in range(len(guards[min_num])):
+                if(i != 0 and guards[min_num][i] != min_num and len(guards[guards[min_num][i]]) &lt; len(guards[min_node])):
+                    min_node = guards[min_num][i]
+            if(guards[min_node] != [-1]):
+                remove(guards, min_num)
+                remove(guards, min_node)
+                to_process -= 2
+
+    return bad</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 8: Bringing a Gun to a Guard Fight -->
+        <div id="bringing-a-gun-to-a-guard-fight" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Bringing a Gun to a Guard Fight</h3>
+            <span class="difficulty-badge difficulty-hard">Level 4 &middot; Hard</span>
+          </div>
+          <p>
+            Easily the hardest challenge for me. You're in a room of given dimensions and can
+            shoot a laser beam that reflects off walls. Figure out exactly which directions you can
+            shoot so the beam reaches your enemy, given a max distance and your position.
+          </p>
+          <p>
+            The key insight: instead of calculating reflections, mirror the room. By tiling
+            mirrored copies of the room, every reflected path becomes a straight line to a
+            mirrored copy of the target. The room mirrors in a predictable pattern, so you
+            build an atlas of mirrored positions up to the max distance, then check angles
+            and ensure the guard's reflection is closer than your own.
+          </p>
+<pre><code>              ----- -----
+              |*~~| |~~*|
+              |xxx| |xxx|
+              ----- -----
+By mirroring the room, reflections become straight lines
+to mirrored copies of the target.</code></pre>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def mirror_atlas(node, dimensions, distance):
+    node_mirrored = []
+    for i in range(len(node)):
+        points = []
+        for j in range(-(distance // dimensions[i]) - 1, (distance // dimensions[i] + 2)):
+            points.append(get_mirror(j, node[i], dimensions[i]))
+        node_mirrored.append(points)
+    return node_mirrored
+
+def get_mirror(mirror, coordinates, dimensions):
+    res = coordinates
+    mirror_rotation = [2 * coordinates, 2 * (dimensions - coordinates)]
+    if(mirror &lt; 0):
+        for i in range(mirror, 0):
+            res -= mirror_rotation[(i + 1) % 2]
+    else:
+        for i in range(mirror, 0, -1):
+            res += mirror_rotation[i % 2]
+    return res
+
+def answer(dimensions, your_position, guard_position, distance):
+    mirrored = [mirror_atlas(your_position, dimensions,
+        distance), mirror_atlas(guard_position, dimensions, distance)]
+    res = set()
+    angles_dist = {}
+    for i in range(0, len(mirrored)):
+        for j in mirrored[i][0]:
+            for k in mirrored[i][1]:
+                beam = atan2((your_position[1] - k), (your_position[0] - j))
+                l = sqrt((your_position[0] - j) ** 2 + (your_position[1] - k) ** 2)
+                if [j, k] != your_position and distance >= l:
+                    if((beam in angles_dist and angles_dist[beam] > l) or beam not in angles_dist):
+                        if i == 0:
+                            angles_dist[beam] = l
+                        else:
+                            angles_dist[beam] = l
+                            res.add(beam)
+    return len(res)</code></pre>
+          </details>
+        </div>
+
+        <!-- Challenge 9: Expanding Nebula -->
+        <div id="expanding-nebula" class="challenge-card card-solid reveal">
+          <div class="challenge-card-header">
+            <h3>Expanding Nebula</h3>
+            <span class="difficulty-badge difficulty-hard">Level 5 &middot; Hard</span>
+          </div>
+          <p>
+            The second hardest problem. Given a 2D grid of booleans, find the number of possible
+            predecessor grids, knowing that a cell is true if and only if exactly one of its four
+            predecessors (itself, right, bottom, bottom-right) was true.
+          </p>
+          <p>
+            The challenge is beating the time limit. Use memoization: index each cell's state by
+            its coordinates and recent move history to avoid redundant recursion. Not complicated
+            in concept, but much harder to figure out than it looks.
+          </p>
+          <details class="code-panel">
+            <summary>View Solution</summary>
+<pre><code class="language-python">def answer(state, a=0, b=0, past=0, solutions=0, history=0):
+    if(past == 0):
+        past = [[True] * (len(state[0]) + 1) for i in range(len(state) + 1)]
+        solutions = {}
+        history = []
+
+    if(b == len(state[0]) + 1):
+        return True
+
+    res = 0
+    index = ((a, b), tuple(history[-(len(state) + 2):]))
+    if index in solutions:
+        return solutions[index]
+
+    for cell in [True, False]:
+        if (not a or not b) or len(set([((past[a][b - 1] + past[a - 1][b]
+            + past[a - 1][b - 1] + cell) == 1), state[a - 1][b - 1]])) == 1:
+                history.append(cell)
+                past[a][b] = cell
+                res += answer(state, a=(a + 1) % (len(state) + 1),
+                        b=b + (a + 1) // (len(state) + 1), past=past,
+                        solutions=solutions, history=history)
+                history.pop()
+
+    solutions[index] = res
+    return res</code></pre>
+          </details>
+        </div>
+
+        <!-- End and Hack Stuff -->
+        <section id="end-and-hack-stuff" class="reveal">
+          <h2>End &amp; Hack Stuff</h2>
+          <p>
+            After finishing all challenges, there's a <code>recruitme</code> command and a nice
+            cipher to end the game. The ending message was encrypted with a rolling XOR pad
+            using my Foobar username as the key -- notoriously weak encryption that was easy
+            to spot since the base64 string started with "HEYGA" (my username being "gauvain").
+          </p>
+          <details class="code-panel">
+            <summary>View Decryption Script</summary>
+<pre><code class="language-python">import base64
+encrypted = "HEYGAwIKCxQSUlZbSUkAExAXFU5CR0YWGQ0FCwYGABNGSVRHRhAFFQwLCgQRUU1JSQIHExkTHR1AQU9WRgAABBMQEggLAgJGWVZGCA0PCBAABAQLCRVSVltJSRIPGRkCAgsDRllWRhsPBQMcAhJOTl1BUgUADwtATVVRBwYBQEFPVkYeBwlAUgs="
+my_eyes = str.encode("gauvain")
+decoded = base64.b64decode(encrypted)
+decrypted = ""
+for i in range(0, len(decoded)):
+    decrypted += chr((my_eyes[i % len(my_eyes)] ^ decoded[i]))
+print(decrypted)</code></pre>
+          </details>
+<pre><code>$ python end.py
+{'success' : 'great', 'colleague' : 'esteemed', 'efforts' : 'incredible',
+ 'achievement' : 'unlocked', 'rabbits' : 'safe', 'foo' : 'win!'}</code></pre>
+
+          <h3>Hacking the Test VM</h3>
+          <p>
+            When using asserts in my solutions, I noticed that misindented asserts running in
+            global scope leaked error text -- revealing read access to the VM. After painfully
+            editing dumping scripts around the 1MB memory limit and file-open restrictions, I
+            managed a full dump.
+          </p>
+<pre><code>$ file ~/foobar/hack/dump/export/pypy/bin/pypy
+ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),
+dynamically linked, for GNU/Linux 2.6.26, stripped</code></pre>
+          <p>
+            The VM contained <code>/tmp</code>, <code>/pypy</code>, and <code>/main.py</code>
+            which reads source code from file descriptor 3, locates the answer function, runs
+            test cases, and writes results back to fd 3. The VM was locked down by nsjail --
+            no network, time-limited, read-only. While I achieved code execution, a full sandbox
+            escape from nsjail remained elusive.
+          </p>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="reveal">
+          <h2>Conclusion</h2>
+          <p>
+            All 9 challenges done. Levels 1-2 were "just code and think later." Level 3 was
+            "how good can you Google." Levels 4 and 5 required pen-and-paper math and genuinely
+            creative thinking.
+          </p>
+          <p>
+            One neat observation: I finished all 9 challenges in under 200 lines of Python.
+            Foobar was a fun challenge, albeit a bit overhyped -- ultimately a glorified
+            month-spanning interview for Google. No new Cicada 3301 hiding under the lines.
+          </p>
+          <p>
+            The full code is available at
+            <a href="https://code.govanify.com/govanify/foobar" target="_blank" rel="noopener">code.govanify.com/govanify/foobar</a>.
+          </p>
+        </section>
+
+      </div><!-- /.article-content -->
+    </div><!-- /.article-with-toc -->
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">Handcrafted with ☕ and ❤️ by Arnab Saha</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "arnab1996.github.io",
+  "version": "1.0.0",
+  "description": "This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arnab1996/Arnab1996.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arnab1996/Arnab1996.github.io/issues"
+  },
+  "homepage": "https://github.com/Arnab1996/Arnab1996.github.io#readme",
+  "devDependencies": {
+    "vite": "^8.0.8"
+  },
+  "dependencies": {
+    "@fontsource-variable/outfit": "^5.2.8",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "gsap": "^3.15.0",
+    "split-type": "^0.3.4"
+  }
+}
