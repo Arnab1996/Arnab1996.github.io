@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTTPBin | Arnab Saha</title>
+  <meta name="description" content="A simple HTTP Request & Response Service. Explore HTTP methods, authentication, status codes, request/response inspection, and more." />
+  <meta name="keywords" content="HTTPBin, HTTP, API, REST, Swagger, Request, Response" />
+  <meta name="author" content="Arnab Saha" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HTTPBin | Arnab Saha" />
+  <meta property="og:description" content="A simple HTTP Request & Response Service for testing and exploring HTTP APIs." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Swagger UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.17.14/swagger-ui.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.17.14/swagger-ui-bundle.js"></script>
+
+  <!-- Swagger UI theme override -->
+  <style>
+    .swagger-ui { font-family: var(--font-body, 'Outfit', sans-serif); }
+    .swagger-ui .topbar { display: none; }
+    .swagger-ui .info { margin: 0; padding: 0; }
+    .swagger-ui .info .title { display: none; }
+    .swagger-ui .info .description { display: none; }
+    .swagger-ui .scheme-container { display: none; }
+    .swagger-ui .opblock-tag {
+      font-family: var(--font-display, 'Space Grotesk', sans-serif);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 0;
+    }
+    .swagger-ui .opblock {
+      border-radius: 12px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .swagger-ui .opblock .opblock-summary { border-radius: 12px; padding: 8px 16px; }
+    .swagger-ui .btn { border-radius: 8px; }
+    .swagger-ui .wrapper { padding: 0; max-width: 100%; }
+    .swagger-ui .opblock-tag-section { margin-bottom: 16px; }
+
+    /* Dark theme comprehensive overrides */
+    [data-theme="dark"] .swagger-ui { color: #cbd5e1; }
+    [data-theme="dark"] .swagger-ui .opblock-tag { color: #f1f5f9; border-color: rgba(255,255,255,0.06); }
+    [data-theme="dark"] .swagger-ui .opblock-tag small { color: #94a3b8; }
+    [data-theme="dark"] .swagger-ui .opblock { background: rgba(255,255,255,0.02); }
+    [data-theme="dark"] .swagger-ui .opblock .opblock-summary { background: none; }
+    [data-theme="dark"] .swagger-ui .opblock .opblock-summary-description { color: #94a3b8; }
+    [data-theme="dark"] .swagger-ui .opblock-body { background: rgba(255,255,255,0.01); }
+    [data-theme="dark"] .swagger-ui .opblock-body pre {
+      background: #0f172a; color: #e2e8f0;
+      border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);
+    }
+    [data-theme="dark"] .swagger-ui .opblock-description-wrapper,
+    [data-theme="dark"] .swagger-ui .opblock-description-wrapper p,
+    [data-theme="dark"] .swagger-ui table thead tr td,
+    [data-theme="dark"] .swagger-ui table thead tr th,
+    [data-theme="dark"] .swagger-ui .parameter__name,
+    [data-theme="dark"] .swagger-ui .parameter__type,
+    [data-theme="dark"] .swagger-ui .response-col_status,
+    [data-theme="dark"] .swagger-ui .response-col_description,
+    [data-theme="dark"] .swagger-ui .response-col_description p,
+    [data-theme="dark"] .swagger-ui .markdown p,
+    [data-theme="dark"] .swagger-ui label { color: #cbd5e1; }
+
+    /* Alternating row colors for tables */
+    [data-theme="dark"] .swagger-ui table tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+    [data-theme="dark"] .swagger-ui table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
+    [data-theme="dark"] .swagger-ui table thead tr { background: rgba(124,58,237,0.08); }
+    [data-theme="dark"] .swagger-ui table thead tr th,
+    [data-theme="dark"] .swagger-ui table thead tr td { color: #a855f7; font-weight: 600; }
+
+    /* Method badges */
+    [data-theme="dark"] .swagger-ui .opblock.opblock-get { background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.15); }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-get .opblock-summary { border-color: transparent; }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-post { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.15); }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-post .opblock-summary { border-color: transparent; }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-put { background: rgba(249,115,22,0.06); border-color: rgba(249,115,22,0.15); }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-put .opblock-summary { border-color: transparent; }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-delete { background: rgba(239,68,68,0.06); border-color: rgba(239,68,68,0.15); }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-delete .opblock-summary { border-color: transparent; }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-patch { background: rgba(124,58,237,0.06); border-color: rgba(124,58,237,0.15); }
+    [data-theme="dark"] .swagger-ui .opblock.opblock-patch .opblock-summary { border-color: transparent; }
+
+    /* Inputs */
+    [data-theme="dark"] .swagger-ui select { background: #1a1a2e; color: #cbd5e1; border-color: rgba(255,255,255,0.1); border-radius: 8px; }
+    [data-theme="dark"] .swagger-ui input[type=text],
+    [data-theme="dark"] .swagger-ui textarea { background: #1a1a2e; color: #cbd5e1; border-color: rgba(255,255,255,0.1); border-radius: 8px; }
+    [data-theme="dark"] .swagger-ui .btn.execute { background: linear-gradient(135deg, #7c3aed, #f97316); color: white; border: none; }
+    [data-theme="dark"] .swagger-ui .btn { border-color: rgba(255,255,255,0.1); color: #cbd5e1; }
+    [data-theme="dark"] .swagger-ui .model-box { background: rgba(255,255,255,0.03); border-radius: 8px; }
+    [data-theme="dark"] .swagger-ui .highlight-code pre { background: #0f172a; }
+    [data-theme="dark"] .swagger-ui .response-content-type { color: #94a3b8; }
+
+    /* Expand/collapse arrows */
+    [data-theme="dark"] .swagger-ui .expand-operation svg { fill: #94a3b8; }
+    [data-theme="dark"] .swagger-ui .arrow { fill: #94a3b8; }
+
+    /* Loading bar */
+    [data-theme="dark"] .swagger-ui .loading-container .loading::after { color: #94a3b8; }
+  </style>
+
+  <!-- Entry point -->
+  <script type="module" src="/sub-page-app.js"></script>
+</head>
+
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <svg width="120" height="60" viewBox="0 0 120 60">
+      <defs>
+        <linearGradient id="gradient-brand" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#f97316" />
+        </linearGradient>
+      </defs>
+      <text x="10" y="45">A$</text>
+    </svg>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar-brand">A$ <span aria-hidden="true">🔥</span></a>
+
+    <div class="navbar-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#timeline">Journey</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </div>
+
+    <div class="navbar-right">
+      <a href="/Arnab_Saha_Resume_1_page.pdf" class="navbar-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+
+    <button class="navbar-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#timeline">Journey</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#contact">Contact</a>
+    <a href="/Arnab_Saha_Resume_1_page.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="sub-page">
+    <div class="container">
+
+      <!-- Page Header -->
+      <header class="sub-page-header reveal">
+        <h1><span class="text-gradient">HTTPBin</span></h1>
+        <p>A simple HTTP Request &amp; Response Service</p>
+        <div class="badge-group">
+          <span class="badge">HTTP</span>
+          <span class="badge">REST API</span>
+          <span class="badge">Testing</span>
+          <span class="badge">Swagger</span>
+        </div>
+      </header>
+
+      <!-- Back Link -->
+      <a href="/" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+
+      <!-- Description & Base URL -->
+      <div class="callout reveal" style="margin-top: var(--space-6);">
+        <p><strong>Base URL:</strong> <code>https://arnab1996.github.io/httpbin</code></p>
+        <p style="margin-top: var(--space-3);">HTTPBin is an HTTP Request &amp; Response testing service. It allows developers to inspect, test, and debug HTTP requests and responses. Use it to verify how your client handles different HTTP methods, status codes, authentication schemes, redirects, cookies, and more.</p>
+        <p style="margin-top: var(--space-2);">
+          <a href="https://arnab1996.github.io/" target="_blank" rel="noopener">Developer Website</a>
+          &nbsp;&middot;&nbsp;
+          <a href="mailto:arnabthedragon@gmail.com">Contact the Developer</a>
+        </p>
+      </div>
+
+      <!-- ============ SWAGGER UI ============ -->
+      <div class="article-content reveal" style="margin-top: var(--space-10);">
+        <div id="swagger-ui"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">Handcrafted with ☕ and ❤️ by Arnab Saha</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (typeof SwaggerUIBundle !== 'undefined') {
+          SwaggerUIBundle({
+            url: '/spec.json',
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            docExpansion: 'list',
+            defaultModelsExpandDepth: -1,
+            layout: 'BaseLayout',
+          });
+        }
+      }, 500);
+    });
+  </script>
+</body>
+</html>
