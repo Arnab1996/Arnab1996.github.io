@@ -26,7 +26,13 @@ jobs:
 
       - run: npm install
 
-      - run: npm run build
+      - name: Build
+        run: |
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+          echo "Vite version: $(npx vite --version)"
+          ls -la src/index.html
+          npx vite build 2>&1
 
       - uses: actions/upload-pages-artifact@v3
         with:
