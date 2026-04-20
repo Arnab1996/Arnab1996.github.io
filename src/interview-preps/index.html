@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170483322-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-170483322-1');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interview Preps | Arnab Saha</title>
+  <meta name="description" content="SDE Coding Interview Preparation Roadmap — a 6-8 month study plan covering data structures, algorithms, and system design." />
+  <meta name="keywords" content="Tech-Interviews, SDE, Coding, Data Structures, Algorithms" />
+  <meta name="author" content="Arnab Saha" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Interview Preps | Arnab Saha" />
+  <meta property="og:description" content="SDE Coding Interview Preparation Roadmap (6-8 months)" />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Entry point -->
+  <script type="module" src="/sub-page-app.js"></script>
+</head>
+
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <svg width="120" height="60" viewBox="0 0 120 60">
+      <defs>
+        <linearGradient id="gradient-brand" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#f97316" />
+        </linearGradient>
+      </defs>
+      <text x="10" y="45">A$</text>
+    </svg>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar-brand">A$ <span aria-hidden="true">🔥</span></a>
+    <div class="navbar-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#timeline">Journey</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <a href="/Arnab_Saha_Resume_1_page.pdf" class="navbar-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+    <button class="navbar-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#timeline">Journey</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#contact">Contact</a>
+    <a href="/Arnab_Saha_Resume_1_page.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="sub-page">
+    <div class="container">
+
+      <!-- Page Header -->
+      <header class="sub-page-header reveal">
+        <h1><span class="text-gradient">SDE Coding Interview Preparation Roadmap</span></h1>
+        <div class="sub-page-meta">
+          <span>6 - 8 months</span>
+          <span>|</span>
+          <span>3 min read</span>
+        </div>
+      </header>
+
+      <!-- Back Link -->
+      <a href="/" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+
+      <!-- Intro -->
+      <div class="article-content reveal">
+        <h2>A Letter to You, the Future Interviewee</h2>
+        <p>When I was preparing for my FAANG interviews, I wish someone had sat me down and said: "Here is exactly what to do, in what order, and what not to waste your time on." Nobody did that for me, so I am doing it for you.</p>
+        <p>This is the roadmap I built for myself over 6-8 months of intense preparation. It is not a textbook outline or a generic checklist you find on some random blog. It is the actual path I walked -- the resources I used, the mistakes I made, and the topics that actually showed up in my interviews. If you follow this honestly, you will be ready.</p>
+        <p>One thing before we start: <strong>consistency beats intensity</strong>. I tried the "grind 12 hours a day for 2 weeks" approach and burned out completely. What actually worked was 2-3 focused hours every single day, no exceptions. Even on the days when I wanted to throw my laptop out the window.</p>
+      </div>
+
+      <!-- ============ STUDY ROADMAP ============ -->
+      <div class="article-content reveal">
+        <h2>The Study Roadmap</h2>
+        <p>I have laid this out in the exact order I would follow if I had to do it all over again. Don't skip ahead. Each milestone builds on the last, and the order matters more than you think.</p>
+      </div>
+
+      <div class="milestone-grid reveal-stagger" style="margin-top: var(--space-6);">
+
+        <!-- Milestone 1 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">01</div>
+          <div class="milestone-title">Time and Space Complexity</div>
+          <div class="milestone-desc">
+            <p>Get a basic understanding of what it means, how complexities are calculated, and then let your intuition grow as you solve more problems. Don't make the mistake I made of trying to "complete" a complexity theory course before writing any code -- you will learn this best by doing.</p>
+            <p><a href="https://www.interviewbit.com/courses/programming/topics/time-complexity/" target="_blank" rel="noopener">InterviewBit - Time Complexity</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge">1 week</span>
+            <span class="badge badge-green">Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">02</div>
+          <div class="milestone-title">Recursion Problems &amp; Dynamic Programming</div>
+          <div class="milestone-desc">
+            <p>The single most important thing I learned in my entire prep journey: if you can think recursively, you can solve almost anything. This is the foundation everything else is built on -- backtracking, trees, graphs, DP, all of it starts with recursion.</p>
+            <p><a href="https://www.techiedelight.com/recursion-practice-problems-with-solutions/" target="_blank" rel="noopener nofollow">Techiedelight - Recursion Practice Problems</a></p>
+            <p>Work through these categories in order. I have listed the completion percentages I aimed for -- and trust me, the ones marked 100% are worth doing every single problem:</p>
+            <ul>
+              <li>String (Complete - 100%)</li>
+              <li>Array (Complete - 100%)</li>
+              <li>Backtracking (Complete - 100%)</li>
+              <li>Binary Tree (Complete - 60%)</li>
+              <li>Binary Search Tree (Complete - 60%)</li>
+              <li>Dynamic Programming (Complete - 100%)</li>
+              <li>Matrix (Complete - 100%)</li>
+              <li>Graphs (Complete - 100%)</li>
+            </ul>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge badge-ember">3 months</span>
+            <span class="badge">Core</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Personal note between milestones -->
+      <div class="article-content reveal" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+        <blockquote>
+          <p>A word about the 3 months above -- yes, it is a long time. I spent roughly 3 months on this alone and it was worth every single hour. There were days I stared at a recursion problem for 2 hours and got nowhere. That frustration is normal. It means your brain is rewiring itself to think differently. Stick with it.</p>
+        </blockquote>
+      </div>
+
+      <div class="milestone-grid reveal-stagger" style="margin-top: var(--space-6);">
+
+        <!-- Milestone 3 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">03</div>
+          <div class="milestone-title">Dynamic Programming Deep-Dive</div>
+          <div class="milestone-desc">
+            <p>DP deserves its own dedicated milestone because it is where most people hit a wall. I certainly did. Before diving into DP problems, read these resources to build your mental model -- understanding <em>why</em> DP works matters more than memorizing patterns.</p>
+            <p>Then come back to the DP problems on Techiedelight. Start there because those problems are gentler, and build up to the harder ones.</p>
+            <p><a href="https://www.codechef.com/wiki/tutorial-dynamic-programming" target="_blank" rel="noopener nofollow">CodeChef - DP Tutorial</a></p>
+            <p><a href="https://www.quora.com/What-are-the-best-ways-to-master-dynamic-programming/answer/Sameer-Gulati-3" target="_blank" rel="noopener nofollow">Quora - Best Ways to Master DP</a></p>
+            <p><a href="https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/" target="_blank" rel="noopener nofollow">TopCoder - DP Novice to Advanced</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge">Deep-Dive</span>
+            <span class="badge badge-ember">Advanced</span>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">04</div>
+          <div class="milestone-title">Sorting &amp; Searching</div>
+          <div class="milestone-desc">
+            <p>You might think "I already know sorting" -- and maybe you do. But can you implement merge sort from memory without looking anything up? Can you explain quicksort's partition step to someone with zero CS background? That is the bar. If you cannot, spend the time here.</p>
+            <p><a href="https://www.geeksforgeeks.org/merge-sort/" target="_blank" rel="noopener nofollow">Merge Sort - GeeksforGeeks</a></p>
+            <p><a href="https://www.youtube.com/watch?v=uXBnyYuwPe8" target="_blank" rel="noopener nofollow">Quick Sort - YouTube</a></p>
+            <p>Binary Search -- know it cold. Not just the textbook version, but all its variants (lower bound, upper bound, search in rotated array). It shows up everywhere.</p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge badge-green">Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">05</div>
+          <div class="milestone-title">Binary Search Problems</div>
+          <div class="milestone-desc">
+            <p>Binary search looks simple on paper, but the number of ways interviewers twist it will surprise you. I underestimated this topic early on and it cost me in a couple of interviews. Spend real time here building intuition for where binary search applies in non-obvious situations.</p>
+            <p><a href="https://www.geeksforgeeks.org/tag/binary-search/" target="_blank" rel="noopener nofollow">GeeksforGeeks - Binary Search Problems</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge">Practice</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Personal note between milestones -->
+      <div class="article-content reveal" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+        <blockquote>
+          <p>At this point in my prep, I started to feel something shift. Problems that seemed impossible a month ago began to feel approachable. If you are in the thick of it right now and nothing is clicking -- keep going. The "aha" moment comes suddenly, and it comes for everyone who puts in the hours.</p>
+        </blockquote>
+      </div>
+
+      <div class="milestone-grid reveal-stagger" style="margin-top: var(--space-6);">
+
+        <!-- Milestone 6 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">06</div>
+          <div class="milestone-title">Heap Data Structure</div>
+          <div class="milestone-desc">
+            <p>Heaps are one of those topics that seem small but punch way above their weight in interviews. "Find the K-th largest element" is practically a rite of passage in tech interviews. Understand heaps deeply -- not just how to use a library's priority queue, but how the data structure works internally.</p>
+            <p><a href="https://www.youtube.com/watch?v=HqPJF2L5h9U&amp;t=2s" target="_blank" rel="noopener nofollow">Heap Concept - YouTube</a></p>
+            <p><a href="https://www.youtube.com/watch?v=t0Cq6tVNRBA" target="_blank" rel="noopener nofollow">Heap Implementation - YouTube</a></p>
+            <p><a href="https://medium.com/@codingfreak/heap-practice-problems-and-interview-questions-b678ff3b694c" target="_blank" rel="noopener">Heap Practice Problems - Medium</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge">Data Structure</span>
+            <span class="badge badge-cyan">Priority Queue</span>
+          </div>
+        </div>
+
+        <!-- Milestone 7 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">07</div>
+          <div class="milestone-title">Sliding Window Problem (Kadane's Algorithm)</div>
+          <div class="milestone-desc">
+            <p>Once you see the sliding window pattern, you start seeing it everywhere. This is one of those techniques that immediately makes you faster in interviews because so many array and string problems are really just sliding window problems in disguise.</p>
+            <p><a href="https://www.youtube.com/watch?v=MK-NZ4hN7rs" target="_blank" rel="noopener nofollow">Kadane's Algorithm - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/sliding-window-problems/" target="_blank" rel="noopener nofollow">Techiedelight - Sliding Window Problems</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge">Technique</span>
+            <span class="badge badge-green">Pattern</span>
+          </div>
+        </div>
+
+        <!-- Milestone 8 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">08</div>
+          <div class="milestone-title">Graph Data Structure</div>
+          <div class="milestone-desc">
+            <h4 style="color: var(--text-heading); margin-bottom: var(--space-2);">DFS &amp; BFS</h4>
+            <p><a href="https://www.youtube.com/watch?v=pcKY4hjDrxk" target="_blank" rel="noopener nofollow">DFS &amp; BFS Explanation - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/depth-first-search/" target="_blank" rel="noopener nofollow">DFS Code - Techiedelight</a></p>
+            <p><a href="https://www.techiedelight.com/breadth-first-search/" target="_blank" rel="noopener nofollow">BFS Code - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Dijkstra's Algorithm</h4>
+            <p><a href="https://www.youtube.com/watch?v=XB4MIexjvY0&amp;t=303s" target="_blank" rel="noopener nofollow">Dijkstra's Part 1 - YouTube</a></p>
+            <p><a href="https://www.youtube.com/watch?v=d6ZFqjH63vo" target="_blank" rel="noopener nofollow">Dijkstra's Part 2 - YouTube</a></p>
+            <p><a href="https://www.youtube.com/watch?v=XqCP_2Vcas4" target="_blank" rel="noopener nofollow">Dijkstra's Part 3 - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/single-source-shortest-paths-dijkstras-algorithm/" target="_blank" rel="noopener nofollow">Dijkstra's Code - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Bellman Ford Algorithm</h4>
+            <p><a href="https://www.youtube.com/watch?v=FtN3BYH2Zes&amp;t=327s" target="_blank" rel="noopener nofollow">Bellman Ford - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/single-source-shortest-paths-bellman-ford-algorithm/" target="_blank" rel="noopener nofollow">Bellman Ford Code - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Floyd-Warshall Algorithm</h4>
+            <p><a href="https://www.youtube.com/watch?v=oNI0rf2P9gE&amp;t=247s" target="_blank" rel="noopener nofollow">Floyd-Warshall - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/pairs-shortest-paths-floyd-warshall-algorithm/" target="_blank" rel="noopener nofollow">Floyd-Warshall Code - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Prim's and Kruskal's Algorithms</h4>
+            <p><a href="https://www.youtube.com/watch?v=4ZlRH0eK-qQ&amp;t=465s" target="_blank" rel="noopener nofollow">Prim's &amp; Kruskal's - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/kruskals-algorithm-for-finding-minimum-spanning-tree/" target="_blank" rel="noopener nofollow">Kruskal's Code - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Other Graph Questions</h4>
+            <p><a href="https://www.techiedelight.com/graphs-interview-questions/" target="_blank" rel="noopener">Techiedelight - Graph Interview Questions</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge badge-ember">Advanced</span>
+            <span class="badge badge-cyan">Graphs</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Personal note between milestones -->
+      <div class="article-content reveal" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+        <blockquote>
+          <p>I am not going to sugarcoat it -- graphs came up in every single interview I had. Not always as an explicit "graph problem," but as something that was secretly a graph underneath (dependency resolution, network reachability, shortest path in a grid). If you only have time to go deep on one advanced topic, make it graphs.</p>
+        </blockquote>
+      </div>
+
+      <div class="milestone-grid reveal-stagger" style="margin-top: var(--space-6);">
+
+        <!-- Milestone 9 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">09</div>
+          <div class="milestone-title">Coding Platforms -- The Grind</div>
+          <div class="milestone-desc">
+            <p>Now it is time to put it all together. Solve medium and hard level questions on LeetCode for about a month. Don't just solve them -- simulate real interview conditions. Set a 45-minute timer, no looking at hints, and write clean code. That is how it will feel on the day.</p>
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Still hungry for more? These are some of my favorite challenge problems:</h4>
+            <p><a href="https://www.youtube.com/watch?v=nTKdYm_5-ZY&amp;t=1260s" target="_blank" rel="noopener nofollow">Petrol Filling Problem</a></p>
+            <p><a href="https://www.youtube.com/watch?v=vBdo7wtwlXs&amp;t=194s" target="_blank" rel="noopener nofollow">Minimum Jumps Problem</a></p>
+            <p><a href="https://www.youtube.com/watch?v=HmBbcDiJapY&amp;t=128s" target="_blank" rel="noopener nofollow">Water Filling Problem</a></p>
+            <p><a href="https://github.com/mohitsinha04/Coding-Interview" target="_blank" rel="noopener nofollow">GitHub - Coding Interview Repo</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge badge-ember">1 month</span>
+            <span class="badge">LeetCode</span>
+          </div>
+        </div>
+
+        <!-- Milestone 10 -->
+        <div class="milestone-card card-solid reveal">
+          <div class="milestone-number">10</div>
+          <div class="milestone-title">Good to Learn - Advanced Structures</div>
+          <div class="milestone-desc">
+            <p>These are not strictly required, but knowing them gives you an edge -- especially for senior roles or companies that love data structure design questions. I learned Tries specifically because a friend told me it came up in his Google interview. He was right to warn me.</p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Disjoint Sets</h4>
+            <p><a href="https://www.youtube.com/watch?v=wU6udHRIkcc&amp;t=1077s" target="_blank" rel="noopener nofollow">Disjoint Sets - YouTube</a></p>
+            <p><a href="https://www.techiedelight.com/disjoint-set-data-structure-union-find-algorithm/" target="_blank" rel="noopener nofollow">Union-Find Algorithm - Techiedelight</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Trie Data Structure</h4>
+            <p><a href="https://www.youtube.com/watch?v=YG6iX28hmd0&amp;t=255s" target="_blank" rel="noopener nofollow">Trie Concept - YouTube</a></p>
+            <p><a href="https://www.youtube.com/watch?v=p4kfbNJzftQ" target="_blank" rel="noopener nofollow">Trie Implementation - YouTube</a></p>
+
+            <h4 style="color: var(--text-heading); margin-top: var(--space-4); margin-bottom: var(--space-2);">Segment Trees</h4>
+            <p><a href="https://www.youtube.com/watch?v=CN0N1ddJ9hA&amp;list=PLMCXHnjXnTnuASA1NghV3Vs9J3D_ij5w2" target="_blank" rel="noopener nofollow">Segment Trees Playlist - YouTube</a></p>
+          </div>
+          <div style="margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2);">
+            <span class="badge badge-cyan">Bonus</span>
+            <span class="badge">Advanced</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ============ RESOURCES ============ -->
+      <div class="article-content reveal" style="margin-top: var(--space-16);">
+        <h2>Resources That Actually Helped Me</h2>
+      </div>
+
+      <!-- ============ YOUTUBE CHANNELS ============ -->
+      <div class="article-content reveal">
+        <h3>YouTube Channels to Refer</h3>
+        <p>I watched a lot of YouTube during my prep. Most of it was useless. These four channels were the exception -- their explanations are clear, visual, and interview-focused:</p>
+        <ol>
+          <li><a href="https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA" target="_blank" rel="noopener nofollow">Back To Back SWE</a> -- my personal favorite for intuition-building</li>
+          <li><a href="https://www.youtube.com/channel/UCYvQTh9aUgPZmVH0wNHFa1A" target="_blank" rel="noopener nofollow">Irfan Baqui</a> -- complete all problems on this channel, seriously</li>
+          <li><a href="https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw" target="_blank" rel="noopener nofollow">Abdul Bari</a> -- the best at making complex algorithms feel simple</li>
+          <li><a href="https://www.youtube.com/channel/UCWSYAntBbdd2SLYUqPIxo0w" target="_blank" rel="noopener nofollow">Byte By Byte</a> -- complete all problems on this channel too</li>
+        </ol>
+      </div>
+
+      <!-- ============ COMPANY PROBLEMS ============ -->
+      <div class="article-content reveal">
+        <h3>Company Coding Problems Corner - Must Do</h3>
+        <p>Here is something I wish I had known earlier: companies tend to recycle question patterns. Not the exact questions, but the <em>types</em> of problems. Practicing company-tagged problems gives you a real sense of what to expect.</p>
+        <p>At minimum, work through problems tagged for: Google, Facebook, Amazon, Microsoft, DE Shaw, Directi, Oracle, Adobe, Samsung, Ola, and Walmart Labs.</p>
+        <p><a href="https://www.geeksforgeeks.org/must-coding-questions-company-wise/" target="_blank" rel="noopener">GeeksforGeeks - Must Do Company-Wise Problems</a></p>
+      </div>
+
+      <!-- ============ GOOGLE INTERVIEW ============ -->
+      <div class="article-content reveal">
+        <h3>Google Interview Questions</h3>
+        <p>I am giving Google its own section because preparing for Google taught me more than preparing for any other company. Try finding solutions on YouTube first (preferably on the channels I recommended above -- they have genuinely excellent explanations), and then search elsewhere.</p>
+        <p>Here is a tip that made a huge difference for me: when you find a Google problem, don't just solve it. Look at the <em>related problems</em> that come up in the search results. Follow that rabbit hole. You will discover patterns and connections that make you a fundamentally better problem solver. Trust me, invest your time in this particular section.</p>
+        <p><a href="https://www.interviewbit.com/search/?q=Google" target="_blank" rel="noopener nofollow">InterviewBit - Google Questions</a></p>
+      </div>
+
+      <!-- ============ RECOMMENDED BOOKS ============ -->
+      <div class="article-content reveal">
+        <h2>Recommended Books</h2>
+        <p>I will be honest -- I did not read many books cover to cover. But this one is worth having on your desk:</p>
+        <blockquote>
+          <p>"Cracking the Coding Interview" -- use it for the basics and the problem-solving framework, not as your primary problem source. The real learning happens on platforms like LeetCode and Techiedelight.</p>
+        </blockquote>
+      </div>
+
+      <!-- ============ END NOTE ============ -->
+      <div class="article-content reveal">
+        <h2>End Note</h2>
+        <p>I never expected switching jobs to be this difficult. If you are in the middle of it right now and feeling frustrated, exhausted, or questioning whether you are cut out for this -- I have been exactly where you are. Things don't always go as planned. Sometimes you prepare for months and still don't clear an interview because the interviewer had a bad day, or the question was something you had never seen, or a hundred other things outside your control.</p>
+        <p>There is a role of chance and luck in this process, and accepting that is not weakness -- it is wisdom. What you <em>can</em> control is your preparation, your consistency, and your attitude. Focus on those.</p>
+        <p>A Sanskrit verse from the Bhagavad Gita keeps me grounded during those difficult moments. I keep coming back to it whenever rejection stings:</p>
+      </div>
+
+      <!-- ============ BHAGAVAD GITA SHLOK ============ -->
+      <div class="callout reveal" style="max-width: 780px; margin: var(--space-8) auto; text-align: center; padding: var(--space-8) var(--space-6);">
+        <p style="font-size: var(--text-xl); line-height: 1.8; margin-bottom: var(--space-4);"><span class="text-gradient" style="font-style: normal; font-weight: 600;">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</span></p>
+        <p style="font-style: italic; color: var(--text-muted); line-height: 1.7;">"You have the right to work only, but never to its fruits. Let not the fruits of action be your motive, nor let your attachment be to inaction."</p>
+        <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: var(--space-2); margin-bottom: 0; font-style: normal;">-- Bhagavad Gita, Chapter 2, Verse 47</p>
+      </div>
+
+      <div class="article-content reveal">
+        <p>Do your work with full dedication, and let go of the anxiety about results. That is the only way to stay sane through this process -- and frankly, it is good advice for the rest of life too.</p>
+        <p style="text-align: center; font-size: var(--text-2xl); margin-top: var(--space-8);">Happy Coding!!!</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">Handcrafted with ☕ and ❤️ by Arnab Saha</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</body>
+</html>

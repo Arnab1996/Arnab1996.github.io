@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170483322-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-170483322-1');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interview Experience | Arnab Saha</title>
+  <meta name="description" content="Insights and experiences from interviews at Facebook and Google. SDE Coding Interview Preparation Roadmap." />
+  <meta name="keywords" content="Tech-Interviews, Facebook, Google, SDE, Coding Interview" />
+  <meta name="author" content="Arnab Saha" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Interview Experience | Arnab Saha" />
+  <meta property="og:description" content="Insights and experiences from interviews at Facebook and Google." />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Entry point -->
+  <script type="module" src="/sub-page-app.js"></script>
+</head>
+
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <svg width="120" height="60" viewBox="0 0 120 60">
+      <defs>
+        <linearGradient id="gradient-brand" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#f97316" />
+        </linearGradient>
+      </defs>
+      <text x="10" y="45">A$</text>
+    </svg>
+  </div>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="navbar-brand">A$ <span aria-hidden="true">🔥</span></a>
+    <div class="navbar-links">
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#timeline">Journey</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <a href="/Arnab_Saha_Resume_1_page.pdf" class="navbar-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="icon-moon" aria-hidden="true">🌙</span>
+        <span class="icon-sun" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+    <button class="navbar-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" aria-hidden="true">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#timeline">Journey</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#contact">Contact</a>
+    <a href="/Arnab_Saha_Resume_1_page.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="sub-page">
+    <div class="container">
+
+      <!-- Page header -->
+      <header class="sub-page-header reveal">
+        <h1><span class="text-gradient">Interview Experience</span></h1>
+        <p class="sub-page-meta">
+          If you've ever dreamed of working at a place like Facebook or Google and then immediately
+          talked yourself out of it -- "someone like me could never get in" -- this one's for you.
+          I've been exactly where you are, and I want to tell you what actually happened.
+        </p>
+        <p class="text-muted text-sm" style="margin-top: var(--space-2);">SDE Coding Interview Preparation Roadmap</p>
+      </header>
+
+      <!-- Back link -->
+      <a href="/" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Home
+      </a>
+
+      <div class="article-content">
+
+        <!-- ========== FACEBOOK SECTION ========== -->
+        <section class="reveal">
+          <div class="company-banner card-solid">
+            <img src="/images/fb.jpeg" alt="Facebook logo" />
+            <div>
+              <h3>Facebook</h3>
+              <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-2);">
+                <span class="badge">Onsite</span>
+                <span class="badge badge-ember">System Design</span>
+                <span class="badge badge-cyan">Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>Let Me Tell You About the Time I Interviewed at Facebook</h2>
+
+          <h3>A Shot in the Dark</h3>
+          <p>
+            Honestly? It started with me sending cold messages to strangers on LinkedIn and not expecting
+            much back. I know how awkward that feels -- your finger hovers over "Send" and you think,
+            "They're never going to reply to me." But here's the thing: they did. I heard back from
+            recruiters at Amazon, Microsoft, Snapchat, Bloomberg, and Apple, all from messages I sent
+            to people I'd never met. Then one day in August, an email I'd sent landed me a recruiter
+            call from Facebook. I remember staring at my phone thinking, "Wait, really?"
+          </p>
+          <p>
+            If I could go back and tell myself one thing, it would be this: getting that first recruiter
+            call is the hardest, most patience-testing part of the whole journey. Don't wait until you
+            feel "ready" to start applying -- you'll never feel ready. Just start. And here's something
+            most people don't realize: once a recruiter reaches out, you can ask for months of
+            preparation time before scheduling your first interview. They're used to it. Take the
+            time you need.
+          </p>
+        </section>
+
+        <section class="reveal">
+          <h3>Gotta Nail It</h3>
+          <p>
+            So there I was, two weeks out from my technical screen, trying not to spiral. The format
+            was straightforward enough: solve two questions in 45 minutes. The questions turned out to
+            be fairly basic -- an array problem and a string problem -- but let me tell you, "basic"
+            feels a lot less basic when someone is watching you code in real time.
+          </p>
+          <p>
+            One thing that saved me, and I mean genuinely saved me, was the <em><strong>test run</strong></em>.
+            Here's what that means: your code isn't actually compiled and executed in the interview.
+            Instead, the interviewer asks you to pick a test input and walk through your code
+            line by line, showing how it would run. I know it sounds tedious, but it became my
+            secret weapon. Running through a test case right after writing my solution let me catch
+            the obvious mistakes myself -- missing an index, off-by-one errors, that kind of thing.
+            It's so much better to find those yourself than to have the interviewer point them out
+            with that polite-but-you-know-it's-bad smile.
+          </p>
+          <p>
+            For the second question, I came up with two different approaches and walked the
+            interviewer through both. He asked me to compare them and analyse the advantages of one
+            over the other -- which was actually a fun conversation once the initial nerves wore off.
+            The last five minutes are reserved for you to ask the interviewer questions. I don't think
+            this part factors into your evaluation, so just be genuine and curious.
+          </p>
+          <p>
+            Oh, and one resource I absolutely have to mention:
+            <a target="_blank" rel="noopener" href="https://leetcode.com/discuss/interview-question">Leetcode</a> is
+            well-known for interview prep, and it deserves the hype. But the real hidden gem is
+            <em><strong>Leetcode Discuss</strong></em>. People share their actual interview experiences
+            and questions there, and believe me -- questions do repeat. It felt like finding a cheat
+            code, except it's completely legitimate.
+          </p>
+        </section>
+
+        <section class="reveal">
+          <h3>Onsite Interview</h3>
+          <p>
+            Facebook moves fast -- and I mean that literally. I heard back from the recruiter within
+            two days, and before I knew it, I was on a flight to London for the onsite. Four interviews
+            in one day. I remember walking up to the building and thinking, "Okay, this is actually
+            happening."
+          </p>
+
+          <div class="card-solid reveal" style="margin: var(--space-6) 0;">
+            <img src="/images/fbmap.png" alt="Facebook AR/VR division office in London" style="width: 100%; border-radius: var(--radius-md);" />
+            <p class="text-muted text-sm" style="margin-top: var(--space-3);">Facebook AR/VR division office. There are two more Facebook offices in London.</p>
+          </div>
+
+          <h3>Coding interviews (x 2)</h3>
+          <p>
+            Each coding round had two questions to solve in 45-50 minutes. The topics ranged across
+            binary trees, strings, stacks, and lists. The format is to discuss your approach with the
+            interviewer first and then write your code on the whiteboard.
+          </p>
+          <p>
+            Here's the technique that carried me through: immediately after writing my solution on the
+            board, I'd say, "Let me test-run this on a generic example and debug it before we go further."
+            The interviewers always seemed to appreciate that. And it works -- the obvious mistakes jump
+            out during that first walkthrough. A missing null check, a loop that goes one step too far.
+            Finding those yourself gives you a quiet confidence, and it buys you thinking time to
+            consider the edge cases you might have missed.
+          </p>
+
+          <h3>System Design Interview</h3>
+          <p>
+            This round was the one that intimidated me the most, and honestly, it turned out to be the
+            most important one. For entry-level engineers, this is relatively new territory.
+            The idea is to design a system from scratch. The problem statement usually looks something
+            like:
+          </p>
+          <ol>
+            <li>Design an existing product like WhatsApp, Facebook, Google search, etc.</li>
+            <li>Design a particular feature of one of these applications; say, implement a timeline in a Facebook app.</li>
+            <li>Design a completely hypothetical scenario; say, create a system to store logs of three servers situated far apart.</li>
+          </ol>
+          <p>
+            <em>If you do nothing else to prepare for this round, go through
+            <a target="_blank" rel="noopener" href="https://www.educative.io/courses/grokking-the-system-design-interview">Grokking the System Design Interview.</a>
+            Seriously. It was the single most useful resource I found for this kind of preparation.</em>
+          </p>
+          <p>
+            The reassuring thing is that there are no "correct" answers. What matters is whether you
+            can justify your design choices and clearly articulate the tradeoffs you've made. It's
+            more like a conversation than an exam, once you get past the initial jitters.
+          </p>
+
+          <h3>Behavioral Interview</h3>
+          <p>
+            This one felt like a breather -- and I think that's by design. It's the easiest of the
+            four rounds, but don't sleepwalk through it. Any red flags here can still cost you.
+            The questions are about leadership, teamwork, handling disagreements -- the kind of stuff
+            that's hard to fake but easy to prepare for because the question set is fairly predictable.
+          </p>
+          <p>
+            The night before my onsite, I went through a list of popular behavioral questions and
+            thought about specific stories from my work that matched each one. Real stories, with
+            details, not rehearsed corporate-speak. That preparation paid off -- I walked out of the
+            behavioral round feeling genuinely good, and that confidence boost carried me into the
+            remaining technical interviews.
+          </p>
+        </section>
+
+        <section class="reveal">
+          <h3>What I Learned (The Hard Way)</h3>
+          <p>
+            Looking back, and after reading my feedback, two things stand out more than anything else:
+          </p>
+          <p>
+            <strong>The system design round was the decider.</strong> I cannot stress this enough. You need
+            to present your ideas in a structured way -- don't just sketch boxes on a board and wave your
+            hands. Think about database schema, protocol definitions, the details that show you've
+            actually thought this through (the
+            <a target="_blank" rel="noopener" href="https://www.educative.io/courses/grokking-the-system-design-interview">Grokking the System Design Interview</a>
+            course covers these systematically). Take the initiative and drive the conversation in a
+            logical order: gather requirements, sketch the high-level design, then dig into the pros
+            and cons. The important sections to practice are: gathering requirements, defining protocol,
+            high-level design, database schema, data size estimation, component design, and tradeoffs.
+          </p>
+          <p>
+            <strong>Facebook expects you to be sharp on algorithms.</strong> They notice the small things --
+            traversing an array twice when once would do, a suboptimal data structure choice, a missed
+            edge case. Do test runs, discuss edge cases, try to optimize, and write quickly on the
+            whiteboard. I know that sounds like a lot, but here's the encouraging part: every question I
+            got had a beautifully simple solution. Nothing felt impossibly clever. The hard part was
+            getting there under pressure, not the solution itself.
+          </p>
+        </section>
+
+        <!-- ========== GOOGLE SECTION ========== -->
+        <section class="reveal" style="margin-top: var(--space-16);">
+          <div class="company-banner card-solid">
+            <img src="/images/google.jpg" alt="Google logo" />
+            <div>
+              <h3>Google</h3>
+              <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-2);">
+                <span class="badge">Competitive Programming</span>
+                <span class="badge badge-green">Data Structures</span>
+                <span class="badge badge-cyan">Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <h2>The Google Story -- Starting From Scratch</h2>
+
+          <h3>Cracking Google Interview starting from scratch!</h3>
+          <p>
+            Okay, now let's talk about the big one. If you're reading this and thinking, "Sure, but
+            I didn't go to IIT or Stanford, so Google would never look at me" -- I get it. I had the
+            exact same insecurity. But I'm going to tell you something that I had to learn the hard
+            way, and I hope it saves you some of that doubt:
+          </p>
+          <p>
+            <em><strong>Google values problem-solving abilities and attitude above everything else including your college.</strong></em>
+          </p>
+          <p>
+            That's not a feel-good platitude. That's what I experienced firsthand. Being honest
+            with yourself about where you are and putting in sincere, consistent effort -- that's the
+            only path that works. Google's software engineering interviews revolve heavily around data
+            structures and algorithms, so let me walk you through exactly how I'd approach the
+            preparation if I were starting over today.
+          </p>
+          <p>
+            <em>I've broken this down into 4 stages. Jump to whichever one sounds like where you are
+            right now -- no need to read from the beginning if you're already past the basics.</em>
+          </p>
+        </section>
+
+        <section class="reveal">
+          <div class="card-solid" style="margin-bottom: var(--space-6);">
+            <h3>Stage 1 -- Finding Your Feet</h3>
+            <p>
+              This is for you if you haven't picked a programming language yet, or if you've just
+              recently chosen one and everything still feels unfamiliar.
+            </p>
+            <p>
+              Pick any language -- C++, Java, Python, whatever calls to you. If you're truly starting
+              from zero, I'd nudge you toward C++ because it forces you to understand what's happening
+              under the hood. But honestly, the language matters less than you think. Once you're
+              comfortable in one, picking up another later is surprisingly easy.
+            </p>
+            <p>
+              Once you've chosen, go through a language-specific training track on something like
+              <a target="_blank" rel="noopener" href="https://www.hackerrank.com/domains/cpp">HackerRank's C++ challenges</a>.
+              Try to work through at least 70% of the problems -- that's roughly 30 or so. Don't rush
+              through them; the goal is to feel at home in the language.
+            </p>
+            <p>
+              Then, start entering contests on platforms like Codeforces, CodeChef, or HackerEarth.
+              On Codeforces, you'll begin in division 2 (div2). Participate in as many live and virtual
+              contests as you can stomach. When you can reliably solve div2 A and B every time, and
+              crack C occasionally, you're ready for the next stage.
+            </p>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <div class="card-solid" style="margin-bottom: var(--space-6);">
+            <h3>Stage 2 -- The Grind That Changes Everything</h3>
+            <p>
+              You're here if you can comfortably solve div2 B and sometimes div2 C during a contest.
+              This is where it starts to get interesting -- and humbling.
+            </p>
+            <p>
+              Start working through div2 C problems from past contests. Just the C problems. You'll
+              run headfirst into topics like graphs, dynamic programming, and number theory -- concepts
+              that might feel alien at first. That's normal. The strategy that worked for me: spend at
+              least 15 minutes genuinely trying before looking at the solution. If after 15 minutes you
+              don't even have a clue, read the editorial. Read it once, twice, three times until it
+              clicks. Study the underlying algorithm. Then -- and this is the crucial part -- close
+              the editorial and write the code yourself from scratch. No peeking.
+            </p>
+            <p>
+              Keep at this until you can consistently solve A, B, and C during live contests. It takes
+              time. There will be weeks where it feels like you're not improving. You are. Trust the
+              process.
+            </p>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <div class="card-solid" style="margin-bottom: var(--space-6);">
+            <h3>Stage 3 -- Where Concepts Start Clicking Together</h3>
+            <p>
+              You're here if you can always solve div2 C and are starting to crack div2 D sometimes.
+              By now, you're not just learning algorithms in isolation -- you're starting to see how
+              they combine.
+            </p>
+            <p>
+              Apply the same approach from Stage 2, but now focus on div2 D problems. These are
+              trickier -- they'll throw multiple concepts at you in a single problem, and the
+              "aha moment" often comes from seeing a connection you wouldn't have noticed a few
+              months ago. This stage is where preparation starts to feel less like studying and more
+              like genuine problem-solving skill.
+            </p>
+          </div>
+        </section>
+
+        <section class="reveal">
+          <div class="card-solid" style="margin-bottom: var(--space-6);">
+            <h3>Stage 4 -- You're Ready (Yes, Really)</h3>
+            <p>
+              If you can consistently solve div2 C and nail div2 D at least 7 out of 10 times --
+              congratulations, and I mean that sincerely. You have a strong command of your language
+              and solid algorithmic thinking. You should be entering Google's annual competitions
+              like Kickstart and Code Jam. Perform well in those, and there's a very real chance a
+              Google recruiter reaches out to you directly.
+            </p>
+            <p>
+              Once you're comfortable at Stage 3 or solidly in Stage 4, start applying through
+              Google's career page or through referrals from friends who work there. Read interview
+              experiences and past questions from interview preparation sites. You probably won't
+              get the exact same questions, but you'll develop a feel for what they're looking for --
+              and that intuition is worth more than memorizing solutions.
+            </p>
+          </div>
+        </section>
+
+        <!-- End note and Bhagavad Gita quote -->
+        <section class="reveal">
+          <h2>One Last Thing</h2>
+          <p>
+            I want to be honest with you about something: I never expected switching jobs to be this
+            difficult. Not just technically -- emotionally. There were days when I questioned whether
+            I was good enough, whether I'd picked the wrong career, whether the whole thing was just
+            a waste of time. If you're in that place right now, I want you to know I've been there too,
+            and it's not a reflection of your ability. There's a real element of chance and luck in the
+            interview process that nobody likes to talk about.
+          </p>
+          <p>
+            During those darker moments, I kept coming back to a Sanskrit verse from the Bhagavad Gita.
+            It's not just a nice quote to put on a poster -- it genuinely kept me sane. It reminded me
+            that the only thing I could control was the work itself, not the outcome. And somehow,
+            letting go of the outcome made the work better.
+          </p>
+
+          <div class="callout" style="text-align: center; padding: var(--space-8) var(--space-6);">
+            <p style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-4);">
+              <span class="text-gradient">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</span>
+            </p>
+            <p style="font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-6);">
+              <span class="text-gradient">मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</span>
+            </p>
+            <p>
+              <em><q>You have the right to work only, but never to its fruits. Let not the fruits of
+              action be your motive, nor let your attachment be to inaction.</q></em>
+            </p>
+          </div>
+
+          <p>
+            Do the work. Do it honestly and fully. And then let go. That's the best any of us can do.
+          </p>
+        </section>
+
+      </div><!-- /.article-content -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">Handcrafted with ☕ and ❤️ by Arnab Saha</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</body>
+</html>
