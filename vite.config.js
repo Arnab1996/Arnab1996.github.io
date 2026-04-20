@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite';
-import { resolve, join } from 'path';
+import { resolve, join, dirname } from 'path';
 import { existsSync, readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: 'src',
