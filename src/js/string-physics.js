@@ -69,8 +69,11 @@ export function initStringPhysics(container) {
     canvas.width = width;
     canvas.height = height;
 
-    // Compute font size based on container width
-    CONFIG.fontSize = Math.min(width * 0.1, 120 * dpr);
+    // Compute font size based on container width — smaller on mobile
+    CONFIG.fontSize = Math.min(width * 0.08, 100 * dpr);
+    if (width / dpr < 768) {
+      CONFIG.fontSize = Math.min(width * 0.12, 60 * dpr);
+    }
 
     initParticles();
   }
@@ -80,10 +83,14 @@ export function initStringPhysics(container) {
     const metrics = ctx.measureText(CONFIG.text);
     const textWidth = metrics.width;
 
-    // Align with the .hero-content container instead of centering on full canvas
+    // Align with the .hero-content container on desktop, center on mobile
     const heroContent = document.querySelector('.hero-content');
+    const isMobile = (width / dpr) < 768;
     let startX;
-    if (heroContent) {
+    if (isMobile) {
+      // Center on mobile
+      startX = (width - textWidth) / 2;
+    } else if (heroContent) {
       const contentRect = heroContent.getBoundingClientRect();
       const canvasRect = canvas.getBoundingClientRect();
       startX = (contentRect.left - canvasRect.left) * dpr;
@@ -91,7 +98,7 @@ export function initStringPhysics(container) {
       startX = (width - textWidth) / 2;
     }
 
-    const baseY = height * 0.42;
+    const baseY = isMobile ? height * 0.30 : height * 0.42;
 
     particles = [];
     let currentX = startX;

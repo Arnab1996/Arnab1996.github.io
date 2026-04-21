@@ -179,6 +179,11 @@
     padding-top: calc(var(--navbar-height) + var(--space-12));
   }
 
+  .hero-name {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    word-break: break-word;
+  }
+
   .hero-card {
     width: 100%;
     max-width: 320px;
